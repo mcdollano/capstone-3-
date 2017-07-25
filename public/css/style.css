@@ -1,0 +1,49 @@
+.side_menu_container {
+	width: 250px;
+	background-color: rgb(67, 129, 98);
+	height: 100%;
+	color: white;
+	position: absolute;
+	z-index: 1;
+	/*float: left;*/
+
+}
+
+.profile_pic_container img {
+	width: 100px;
+	margin-top: 50px;
+}
+
+.pic_name_container {
+	text-align: center;
+}
+
+.admin_panel_container {
+	text-align: left;
+	margin-left: 30%;
+	margin-top: 50px;
+}
+
+.icon_container {
+	margin-bottom: 10px;
+}
+
+.articles_container_right {
+	margin-left: 270px;
+	width: 1500px;
+	/*max-width: 1000px;*/
+
+}
+
+.article_table_container {
+	padding-top: 50px;
+	padding-left: 50px;
+}
+
+.article_table_container th {
+	text-align: center;
+}
+
+.banner_image {
+	width: 100px;
+}
