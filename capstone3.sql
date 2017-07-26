@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2017 at 10:45 AM
+-- Generation Time: Jul 26, 2017 at 11:14 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -36,44 +36,43 @@ CREATE TABLE `articles` (
   `publish_date` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `article_views` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `user_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `articles`
 --
 
-INSERT INTO `articles` (`blog_id`, `category`, `title`, `caption`, `banner_image`, `content`, `publish_date`, `article_views`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'This was very hard.', 'Queen, turning to herself all she said.', 'http://lorempixel.com/640/360/?58050', 'THIS!\' (Sounds of having found the hedge. In a prize herself, rather sharply; \'I think, at the same thing, to learn! Oh, my fur and she thought:.', '1980-10-27 20:57:37', 151, NULL, NULL),
-(2, NULL, 'It\'s always get.', 'Hatter went on, half hoping she had.', 'http://lorempixel.com/640/360/?80598', 'Then they had happened.) So she went on, half my gloves while the rest waited till his garden.\"\' Alice thoughtfully: \'but if I ever saw. How neatly.', '2012-07-18 13:58:55', 91, NULL, NULL),
-(3, NULL, 'I\'ve said to her.', 'She said the book,\' said I suppose it.', 'http://lorempixel.com/640/360/?86151', 'King, with diamonds, and straightening itself up again! Let me very gravely, \'and they lessen from the sea, \'and I\'ll come back to be the Lory, who.', '1988-12-17 05:01:07', 105, NULL, NULL),
-(4, NULL, 'This speech caused.', 'Gryphon, sighing in here the Gryphon,.', 'http://lorempixel.com/640/360/?17426', 'I hadn\'t mentioned me the little white kid gloves, and, as she went mad, you did,\' said the night? Let me he had followed the other side will you so.', '1977-11-26 23:21:18', 42, NULL, NULL),
-(5, NULL, 'Classics master,.', 'I\'m not looking across his arm for.', 'http://lorempixel.com/640/360/?10735', 'White Rabbit, who will be ashamed of a whiting before.\' \'I thought Alice. \'Why, what makes my dears! It\'s enough to shrink any more like what it.', '1971-07-26 11:05:53', 151, NULL, NULL),
-(6, NULL, 'Alice timidly..', 'Alice\'s elbow against her once in.', 'http://lorempixel.com/640/360/?67769', 'Dodo, \'the world go down--Here, Bill! the March Hare interrupted, yawning. \'I\'m NOT a week: HE went on, \'you know who was the Caterpillar seemed to.', '2014-09-18 23:38:29', 65, NULL, NULL),
-(7, NULL, 'Alice. \'I won\'t!\'.', 'Alice looked very rude.\' The.', 'http://lorempixel.com/640/360/?50327', 'While the moment the roof bear?--Mind that beautiful Soup? Pennyworth only wish I shall fall NEVER come to work shaking it was in a great many.', '2012-05-24 01:36:02', 56, NULL, NULL),
-(8, NULL, 'The Mock Turtle..', 'Cat, \'a great disgust, and such as,.', 'http://lorempixel.com/640/360/?15838', 'Alice felt very lonely on in prison,\' the Queen shrieked out. \'Behead that is May it would be Mabel, I\'ll write with wonder what Latitude or \'Off.', '2008-04-24 10:01:13', 191, NULL, NULL),
-(9, NULL, 'Hatter. \'You ought.', 'HER about the ground near the Hatter.', 'http://lorempixel.com/640/360/?76951', 'The long time she got settled down at in the Caterpillar. Alice was in by mice you know?\' said to them so quickly as she said the Rabbit put.', '1986-04-23 07:28:45', 167, NULL, NULL),
-(10, NULL, 'I wonder what they.', 'Queen in it, and they live about it. I.', 'http://lorempixel.com/640/360/?67600', 'Knave \'Turn them in a Gryphon went on, with fur. It was silence instantly, and Alice\'s shoulder, and no larger: still it was,\' he went on their.', '1995-06-07 04:54:40', 190, NULL, NULL),
-(11, NULL, 'The cook and she.', 'There ought to the mushroom growing.', 'http://lorempixel.com/640/360/?42906', 'March Hare. \'Sixteenth,\' added the sky. Twinkle, twinkle--\"\' Here was in the Caterpillar sternly. \'Explain all her riper years, the Mock Turtle with.', '1996-09-28 14:01:14', 96, NULL, NULL),
-(12, NULL, 'I know what I wish.', 'Alice. \'What do you myself,\' said to.', 'http://lorempixel.com/640/360/?70002', 'Alice joined in particular. \'She\'d soon make out what makes me at last: \'and that she suddenly down, all that.\' \'With extras?\' asked in a moment:.', '2010-11-05 15:03:32', 146, NULL, NULL),
-(13, NULL, 'Queen. \'Their.', 'Gryphon, \'she wants cutting,\' said the.', 'http://lorempixel.com/640/360/?73365', 'Hatter: \'as I shall be a very absurd, but she found herself hastily, and was over. Alice did not answer to say to tell her hand, it would be denied,.', '1983-09-03 17:49:37', 171, NULL, NULL),
-(14, NULL, 'THE COURT.\'.', 'Mouse\'s tail; \'but I don\'t believe you.', 'http://lorempixel.com/640/360/?27100', 'King. Here was some of the Dodo suddenly upon a trumpet in saying anything to work nibbling first saw one, time he went on the soldiers did. After a.', '1994-05-17 01:12:30', 18, NULL, NULL),
-(15, NULL, 'Like a hundred.', 'Alice, who felt a really offended. \'We.', 'http://lorempixel.com/640/360/?87038', 'Because he repeated the Hatter. This question certainly was just upset the whole thing, and tried to say but the rest were placed along in search of.', '1981-07-23 09:35:20', 77, NULL, NULL),
-(16, NULL, 'Caucus-race?\' said.', 'King. The Mock Turtle yawned and.', 'http://lorempixel.com/640/360/?67097', 'Alice, (she was holding, and all over the soldiers carrying the March Hare said the large rabbit-hole under it, he said the window, and cried..', '1987-01-01 02:51:46', 39, NULL, NULL),
-(17, NULL, 'Bill! I suppose I.', 'And then, if the Gryphon. \'Of course.', 'http://lorempixel.com/640/360/?60170', 'Wonderland of knot, and Queens, and then, \'we went to other two feet high. CHAPTER V. Advice from being drowned in the Mouse, do to herself; \'the.', '2001-08-19 10:03:02', 73, NULL, NULL),
-(18, NULL, 'On every now here.', 'THEY GAVE HIM TO BE TRUE--\" that\'s all.', 'http://lorempixel.com/640/360/?18402', 'Alice was all sorts of killing somebody, so VERY long breath, and the distance, sitting sad tale!\' said the moment she was losing her draw water had.', '2006-06-12 11:06:30', 43, NULL, NULL),
-(19, NULL, 'It was the effect.', 'Alice was more bread-and-butter--\'.', 'http://lorempixel.com/640/360/?54569', 'And she began, in my own. I\'m somebody else\"--but, oh dear!\' cried the teapot. \'At any rate, there\'s no doubt: only rustling in it very clear way.', '1993-04-11 00:46:51', 118, NULL, NULL),
-(20, NULL, 'Alice, \'and the.', 'NOT a low, trembling voice:-- \'I must.', 'http://lorempixel.com/640/360/?64290', 'I don\'t know,\' said Alice thought Alice, \'they\'re sure I heard her try the fan and turns out of life. Indeed, she began, \'for bringing herself.', '2005-05-21 13:31:37', 8, NULL, NULL),
-(21, NULL, 'T!\' said the.', 'I hadn\'t quite understand it was,\' the.', 'http://lorempixel.com/640/360/?87331', 'Alice noticed, had said in the Mock Turtle to do THAT direction,\' the fan and it. \'That\'s right, I\'m here! It\'ll be different,\' said the book,\'.', '2009-02-01 03:10:49', 57, NULL, NULL),
-(22, NULL, 'I\'m certain! I.', 'The Cat\'s head down without trying.', 'http://lorempixel.com/640/360/?62236', 'Dinah! I want to Alice: \'--where\'s the face. \'Very,\' said to France-- Then followed them, after hunting all that,\' he went on. \'I won\'t!\' said the.', '1978-09-23 00:22:29', 86, NULL, NULL),
-(23, NULL, 'Queen said the.', 'Will you, won\'t you know,\' said to.', 'http://lorempixel.com/640/360/?72159', 'And the mouse to do almost anything more happened, she jumped up and thought Alice. \'Why the same thing that she could, if it sounds uncommon.', '1993-09-28 17:36:39', 47, NULL, NULL),
-(24, NULL, 'I to the door, she.', 'THEN--she found and not much about.', 'http://lorempixel.com/640/360/?94914', 'Five, in a kind of her way back, the Mock Turtle said: \'I\'m glad I\'ve been (Before she had its voice outside, and said Alice, as the month is.', '1984-11-19 09:16:19', 135, NULL, NULL),
-(25, NULL, 'What WILL become.', 'Alice looked at the real Turtle.\'.', 'http://lorempixel.com/640/360/?41133', 'What WILL do anything to see it out one eye, How queer noises, would you grow larger, it sat down, and the Mock Turtle to work shaking it up both.', '2006-12-03 01:06:14', 136, NULL, NULL),
-(26, NULL, 'She went back to.', 'They all the last the King, and.', 'http://lorempixel.com/640/360/?13063', 'HE was.\' \'I only sobbing,\' she asked. \'That WAS when I meant,\' the March Hare went on the chimney, has won, and very soon left alive!\' She generally.', '1987-10-17 09:05:30', 14, NULL, NULL),
-(27, NULL, 'Majesty?\' he wore.', 'VERY long hookah, and Northumbria--\"\'.', 'http://lorempixel.com/640/360/?92870', 'NOT, being alive; for eggs, certainly,\' said as she walked off the wise little chin. However, when she was just now in the soup, and Alice\'s great.', '1997-01-13 01:06:50', 106, NULL, NULL),
-(28, NULL, 'THE.', 'King said Alice. \'You should chance to.', 'http://lorempixel.com/640/360/?39015', 'I know all that she stood near. The King eagerly, and she got it was rather a large birds tittered audibly. \'What do you know--and then after.', '1980-08-19 10:19:52', 94, NULL, NULL),
-(29, NULL, 'Lory. Alice for.', 'King eagerly, and the Mock Turtle.', 'http://lorempixel.com/640/360/?35265', 'And pour the Gryphon, and, as the moral of her anger as it myself to dull and walked off outside,\' the air, and vanished completely. Very soon made.', '1987-07-15 05:34:18', 108, NULL, NULL),
-(30, NULL, 'Gryphon as the.', 'TOOK A bright eager to repeat.', 'http://lorempixel.com/640/360/?65852', 'As soon found at once. \'Give your Majesty,\' said to her answer. \'They\'re done that, you take him to say \"With what you think that she found herself.', '1980-11-22 19:26:54', 107, NULL, NULL);
+INSERT INTO `articles` (`blog_id`, `category`, `title`, `caption`, `banner_image`, `content`, `publish_date`, `article_views`, `created_at`, `updated_at`, `user_id`) VALUES
+(3, NULL, 'I\'ve said to her.', 'She said the book,\' said I suppose it.', 'storage/prof_pic.jpg', 'King, with diamonds, and straightening itself up again! Let me very gravely, \'and they lessen from the sea, \'and I\'ll come back to be the Lory, who.', '1988-12-17 05:01:07', 105, NULL, '2017-07-26 00:29:06', '97'),
+(4, NULL, 'This speech caused.', 'Gryphon, sighing in here the Gryphon,.', 'storage/coach4.png', 'I hadn\'t mentioned me the little white kid gloves, and, as she went mad, you did,\' said the night? Let me he had followed the other side will you so.', '1977-11-26 23:21:18', 42, NULL, '2017-07-26 00:59:49', '97'),
+(5, NULL, 'Classics master,.', 'I\'m not looking across his arm for.', 'storage/', 'White Rabbit, who will be ashamed of a whiting before.\' \'I thought Alice. \'Why, what makes my dears! It\'s enough to shrink any more like what it.', '1971-07-26 11:05:53', 151, NULL, '2017-07-26 01:05:25', '97'),
+(6, NULL, 'Alice timidly..', 'Alice\'s elbow against her once in.', 'http://lorempixel.com/640/360/?67769', 'Dodo, \'the world go down--Here, Bill! the March Hare interrupted, yawning. \'I\'m NOT a week: HE went on, \'you know who was the Caterpillar seemed to.', '2014-09-18 23:38:29', 65, NULL, NULL, '98'),
+(7, NULL, 'Alice. \'I won\'t!\'.', 'Alice looked very rude.\' The.', 'http://lorempixel.com/640/360/?50327', 'While the moment the roof bear?--Mind that beautiful Soup? Pennyworth only wish I shall fall NEVER come to work shaking it was in a great many.', '2012-05-24 01:36:02', 56, NULL, NULL, '98'),
+(8, NULL, 'The Mock Turtle..', 'Cat, \'a great disgust, and such as,.', 'http://lorempixel.com/640/360/?15838', 'Alice felt very lonely on in prison,\' the Queen shrieked out. \'Behead that is May it would be Mabel, I\'ll write with wonder what Latitude or \'Off.', '2008-04-24 10:01:13', 191, NULL, NULL, '98'),
+(9, NULL, 'Hatter. \'You ought.', 'HER about the ground near the Hatter.', 'http://lorempixel.com/640/360/?76951', 'The long time she got settled down at in the Caterpillar. Alice was in by mice you know?\' said to them so quickly as she said the Rabbit put.', '1986-04-23 07:28:45', 167, NULL, NULL, '98'),
+(10, NULL, 'I wonder what they.', 'Queen in it, and they live about it. I.', 'http://lorempixel.com/640/360/?67600', 'Knave \'Turn them in a Gryphon went on, with fur. It was silence instantly, and Alice\'s shoulder, and no larger: still it was,\' he went on their.', '1995-06-07 04:54:40', 190, NULL, NULL, '99'),
+(11, NULL, 'The cook and she.', 'There ought to the mushroom growing.', 'http://lorempixel.com/640/360/?42906', 'March Hare. \'Sixteenth,\' added the sky. Twinkle, twinkle--\"\' Here was in the Caterpillar sternly. \'Explain all her riper years, the Mock Turtle with.', '1996-09-28 14:01:14', 96, NULL, NULL, '99'),
+(12, NULL, 'I know what I wish.', 'Alice. \'What do you myself,\' said to.', 'http://lorempixel.com/640/360/?70002', 'Alice joined in particular. \'She\'d soon make out what makes me at last: \'and that she suddenly down, all that.\' \'With extras?\' asked in a moment:.', '2010-11-05 15:03:32', 146, NULL, NULL, '99'),
+(13, NULL, 'Queen. \'Their.', 'Gryphon, \'she wants cutting,\' said the.', 'http://lorempixel.com/640/360/?73365', 'Hatter: \'as I shall be a very absurd, but she found herself hastily, and was over. Alice did not answer to say to tell her hand, it would be denied,.', '1983-09-03 17:49:37', 171, NULL, NULL, '99'),
+(14, NULL, 'THE COURT.\'.', 'Mouse\'s tail; \'but I don\'t believe you.', 'http://lorempixel.com/640/360/?27100', 'King. Here was some of the Dodo suddenly upon a trumpet in saying anything to work nibbling first saw one, time he went on the soldiers did. After a.', '1994-05-17 01:12:30', 18, NULL, NULL, '100'),
+(15, NULL, 'Like a hundred.', 'Alice, who felt a really offended. \'We.', 'http://lorempixel.com/640/360/?87038', 'Because he repeated the Hatter. This question certainly was just upset the whole thing, and tried to say but the rest were placed along in search of.', '1981-07-23 09:35:20', 77, NULL, NULL, '100'),
+(16, NULL, 'Caucus-race?\' said.', 'King. The Mock Turtle yawned and.', 'http://lorempixel.com/640/360/?67097', 'Alice, (she was holding, and all over the soldiers carrying the March Hare said the large rabbit-hole under it, he said the window, and cried..', '1987-01-01 02:51:46', 39, NULL, NULL, '100'),
+(17, NULL, 'Bill! I suppose I.', 'And then, if the Gryphon. \'Of course.', 'http://lorempixel.com/640/360/?60170', 'Wonderland of knot, and Queens, and then, \'we went to other two feet high. CHAPTER V. Advice from being drowned in the Mouse, do to herself; \'the.', '2001-08-19 10:03:02', 73, NULL, NULL, '100'),
+(18, NULL, 'On every now here.', 'THEY GAVE HIM TO BE TRUE--\" that\'s all.', 'http://lorempixel.com/640/360/?18402', 'Alice was all sorts of killing somebody, so VERY long breath, and the distance, sitting sad tale!\' said the moment she was losing her draw water had.', '2006-06-12 11:06:30', 43, NULL, NULL, '100'),
+(19, NULL, 'It was the effect.', 'Alice was more bread-and-butter--\'.', 'http://lorempixel.com/640/360/?54569', 'And she began, in my own. I\'m somebody else\"--but, oh dear!\' cried the teapot. \'At any rate, there\'s no doubt: only rustling in it very clear way.', '1993-04-11 00:46:51', 118, NULL, NULL, '100'),
+(20, NULL, 'Alice, \'and the.', 'NOT a low, trembling voice:-- \'I must.', 'http://lorempixel.com/640/360/?64290', 'I don\'t know,\' said Alice thought Alice, \'they\'re sure I heard her try the fan and turns out of life. Indeed, she began, \'for bringing herself.', '2005-05-21 13:31:37', 8, NULL, NULL, '100'),
+(21, NULL, 'T!\' said the.', 'I hadn\'t quite understand it was,\' the.', 'http://lorempixel.com/640/360/?87331', 'Alice noticed, had said in the Mock Turtle to do THAT direction,\' the fan and it. \'That\'s right, I\'m here! It\'ll be different,\' said the book,\'.', '2009-02-01 03:10:49', 57, NULL, NULL, '100'),
+(22, NULL, 'I\'m certain! I.', 'The Cat\'s head down without trying.', 'http://lorempixel.com/640/360/?62236', 'Dinah! I want to Alice: \'--where\'s the face. \'Very,\' said to France-- Then followed them, after hunting all that,\' he went on. \'I won\'t!\' said the.', '1978-09-23 00:22:29', 86, NULL, NULL, '100'),
+(23, NULL, 'Queen said the.', 'Will you, won\'t you know,\' said to.', 'http://lorempixel.com/640/360/?72159', 'And the mouse to do almost anything more happened, she jumped up and thought Alice. \'Why the same thing that she could, if it sounds uncommon.', '1993-09-28 17:36:39', 47, NULL, NULL, '100'),
+(24, NULL, 'I to the door, she.', 'THEN--she found and not much about.', 'http://lorempixel.com/640/360/?94914', 'Five, in a kind of her way back, the Mock Turtle said: \'I\'m glad I\'ve been (Before she had its voice outside, and said Alice, as the month is.', '1984-11-19 09:16:19', 135, NULL, NULL, '100'),
+(25, NULL, 'What WILL become.', 'Alice looked at the real Turtle.\'.', 'http://lorempixel.com/640/360/?41133', 'What WILL do anything to see it out one eye, How queer noises, would you grow larger, it sat down, and the Mock Turtle to work shaking it up both.', '2006-12-03 01:06:14', 136, NULL, NULL, '100'),
+(26, NULL, 'She went back to.', 'They all the last the King, and.', 'http://lorempixel.com/640/360/?13063', 'HE was.\' \'I only sobbing,\' she asked. \'That WAS when I meant,\' the March Hare went on the chimney, has won, and very soon left alive!\' She generally.', '1987-10-17 09:05:30', 14, NULL, NULL, '100'),
+(27, NULL, 'Majesty?\' he wore.', 'VERY long hookah, and Northumbria--\"\'.', 'http://lorempixel.com/640/360/?92870', 'NOT, being alive; for eggs, certainly,\' said as she walked off the wise little chin. However, when she was just now in the soup, and Alice\'s great.', '1997-01-13 01:06:50', 106, NULL, NULL, '100'),
+(28, NULL, 'THE.', 'King said Alice. \'You should chance to.', 'http://lorempixel.com/640/360/?39015', 'I know all that she stood near. The King eagerly, and she got it was rather a large birds tittered audibly. \'What do you know--and then after.', '1980-08-19 10:19:52', 94, NULL, NULL, '100'),
+(29, NULL, 'Lory. Alice for.', 'King eagerly, and the Mock Turtle.', 'http://lorempixel.com/640/360/?35265', 'And pour the Gryphon, and, as the moral of her anger as it myself to dull and walked off outside,\' the air, and vanished completely. Very soon made.', '1987-07-15 05:34:18', 108, NULL, NULL, '100'),
+(30, NULL, 'Gryphon as the.', 'TOOK A bright eager to repeat.', 'http://lorempixel.com/640/360/?65852', 'As soon found at once. \'Give your Majesty,\' said to her answer. \'They\'re done that, you take him to say \"With what you think that she found herself.', '1980-11-22 19:26:54', 107, NULL, NULL, '100');
 
 -- --------------------------------------------------------
 
@@ -112,7 +111,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2017_07_24_081701_create_articles_table', 1),
 (4, '2017_07_24_084630_create_tags_table', 1),
 (5, '2017_07_24_084730_create_comments_table', 1),
-(6, '2017_07_25_011809_edit_comments_table', 2);
+(6, '2017_07_25_011809_edit_comments_table', 2),
+(7, '2017_07_25_013242_blogs_tags_table', 3),
+(8, '2017_07_26_022931_AddUserToBlogs', 3);
 
 -- --------------------------------------------------------
 
@@ -170,36 +171,36 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `mobile_number`, `city_address`, `gender`, `occupation`, `company_name`, `industry`, `user_name`, `user_password`, `user_role`, `token`, `created_at`) VALUES
-(64, 'Desiree Bahringer', 'Mante', 'christop.brakus@thiel.com', NULL, NULL, NULL, NULL, NULL, NULL, 'fuqtA6JXH7', '$2y$10$Mdds2qdaWziVyZB3/O9UPu369F/thsuY776y.frqhBb7v27OoB/da', NULL, NULL, '2017-07-25 07:50:45'),
-(65, 'Prof. Scottie Klocko DDS', 'Smith', 'zack21@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'U5oPvM7uDi', '$2y$10$YzpmFLlbH9LFdM.aG1lxeuvVPN3QVOleYql7/AhqvFuKIsQpjIbVC', NULL, NULL, '2017-07-25 07:50:45'),
-(66, 'Miss Jacky Pollich', 'Bogan', 'lavonne.douglas@schimmel.biz', NULL, NULL, NULL, NULL, NULL, NULL, 'FyIV0XMXdk', '$2y$10$bWe9q9kRObTknwE2YCS6M.8sRsDPYTWbNCiarSwa//BiGVjFo0NRS', NULL, NULL, '2017-07-25 07:50:45'),
-(67, 'Gaylord Pollich I', 'Senger', 'marie77@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'zQRwIBnHkq', '$2y$10$A0ph4p1oQM54PlZbpXY0..EVhA.zXDqDBW4bUUABKdo6pknjlND82', NULL, NULL, '2017-07-25 07:50:46'),
-(68, 'Laurel Auer Jr.', 'Braun', 'rory.fisher@waters.net', NULL, NULL, NULL, NULL, NULL, NULL, '3rW00mUYux', '$2y$10$6v5zexdkWcTCpsHHto0jLei8iRn7QQ49fz4/25IEw6iHryTcP3D0K', NULL, NULL, '2017-07-25 07:50:46'),
-(69, 'Gretchen Zemlak', 'Sawayn', 'skye39@bartell.info', NULL, NULL, NULL, NULL, NULL, NULL, 'ZFgUAtVHvK', '$2y$10$ueYlTJDk5DqilYf73E0OaOPOhS6Fw3oCyedsMiTgtuAMhse6eGrg.', NULL, NULL, '2017-07-25 07:50:46'),
-(70, 'Webster Farrell', 'Will', 'odell39@yahoo.com', NULL, NULL, NULL, NULL, NULL, NULL, 'McGObyfDUp', '$2y$10$a/yy0p/ImnCrpcx.D0csd.aPBSrlZQx4v1pO5EcgMLCVkn.Eul81q', NULL, NULL, '2017-07-25 07:50:46'),
-(71, 'Prof. Luther Lang', 'West', 'hermina73@quitzon.com', NULL, NULL, NULL, NULL, NULL, NULL, '9qEIQmVwvL', '$2y$10$mcjO/ORFQ94Vn2tUaIvdyuZMW12vTD0yuCuZ6PxYEkL/y9qpxq2uK', NULL, NULL, '2017-07-25 07:50:46'),
-(72, 'Crystel Mante', 'Herman', 'nhuels@stoltenberg.org', NULL, NULL, NULL, NULL, NULL, NULL, 'LcAKci2AT1', '$2y$10$c3Zs2.iDG06ApNR65PqpqOV9TVYSsUdNnqBJmWlGrXrObPSVkvAzy', NULL, NULL, '2017-07-25 07:50:46'),
-(73, 'Nicholaus Larkin MD', 'Quigley', 'taylor73@miller.org', NULL, NULL, NULL, NULL, NULL, NULL, 'eaGGsdqBor', '$2y$10$Lnf4ZZ.gbPO/br7E3r21Ou6kepFvKoIpr8eTEjjspyYuNW/ndP0B.', NULL, NULL, '2017-07-25 07:50:46'),
-(74, 'Miss Fabiola Pollich I', 'Wilkinson', 'santiago49@dooley.org', NULL, NULL, NULL, NULL, NULL, NULL, 'Jx9V7g4ru9', '$2y$10$tDEGxPowimTVCI7k.isPbejRn74mWvEX7dJdS6RPXUkPyOHS33tzm', NULL, NULL, '2017-07-25 07:50:46'),
-(75, 'Dariana Hyatt', 'Ratke', 'maddison.grimes@wolf.net', NULL, NULL, NULL, NULL, NULL, NULL, 'Nh9BFTjYe7', '$2y$10$/LGlxSOFld61S3bBYzKTQO5cVRV/8pPq10/AYmT9wDcUvpFfVQmrS', NULL, NULL, '2017-07-25 07:50:46'),
-(76, 'Jerry Stanton', 'Thompson', 'brayan.kohler@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'oflMSNJZMl', '$2y$10$ANcq4EIej4Jn18rDYP6kEeYJAA6dkTAJzAm.NNBKuNHe6rhJmz1t.', NULL, NULL, '2017-07-25 07:50:46'),
-(77, 'Avery Luettgen', 'Lehner', 'heidenreich.heloise@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '8Dtq3FdrX3', '$2y$10$1Aou.C2RoqAeETHlwBCH1.q7R4wQsuPBxQDm1Hbf.twpAvj1JWscy', NULL, NULL, '2017-07-25 07:50:47'),
-(78, 'Ms. Keely Hand Sr.', 'Hartmann', 'wdouglas@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '75Jos6L88V', '$2y$10$315vgrH26nD/u2WyVW.kjO/rcFwPFp9MiGjSfmCl2JQvcmhgKb5C6', NULL, NULL, '2017-07-25 07:50:47'),
-(79, 'Nasir Bartell DVM', 'Robel', 'gerald74@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'tk99Z3lmM5', '$2y$10$80RVtK3BG1M1TfyzeKykL.GDRkI5RLlYf/uifUG3lwS3TUi79IrFG', NULL, NULL, '2017-07-25 07:50:47'),
-(80, 'Mandy Herman', 'Blick', 'kellen13@jacobi.com', NULL, NULL, NULL, NULL, NULL, NULL, 'WKYH5VjJOE', '$2y$10$kwQB28Dd9cZ.5hSs9EbjGeKw7Qsu8KYg5Ntyk8mBM5Of5x8zkY7ji', NULL, NULL, '2017-07-25 07:50:47'),
-(81, 'Mrs. Pat Windler DDS', 'Wisozk', 'gfeest@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'fGGTcqlpXd', '$2y$10$yfMZWTjDLAPH/d59Eokxh.YhUsVdSwMtpVKSqxRj2kj3o2sqK323K', NULL, NULL, '2017-07-25 07:50:47'),
-(82, 'Dr. Rupert Terry I', 'Feil', 'jules.weber@dicki.com', NULL, NULL, NULL, NULL, NULL, NULL, 'Bhf6F8oujC', '$2y$10$ajav1aoWQ5t6Q403sOp9..5x1qJuoFrSAPzKbPxN7V1oMj7QQQKTy', NULL, NULL, '2017-07-25 07:50:47'),
-(83, 'Marie Emard', 'Kreiger', 'johnnie.wisozk@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'Qp6AgodlI0', '$2y$10$r2hF6ca6dlYWaOa7n1y31uYeJRzakn6qMFu.Pe0F3bFhohDct12mu', NULL, NULL, '2017-07-25 07:50:47'),
-(84, 'Ethyl Leffler MD', 'Quigley', 'quinten.dicki@yahoo.com', NULL, NULL, NULL, NULL, NULL, NULL, 'GgsDLe0qE3', '$2y$10$TrSOGUv3mvnI9gZj6NNLduYVQIqpQ/aUhKDwsCoTxz0QSUwe8BoG2', NULL, NULL, '2017-07-25 07:50:47'),
-(85, 'Odessa Gleichner PhD', 'Lehner', 'yundt.mabelle@terry.net', NULL, NULL, NULL, NULL, NULL, NULL, '26ksvRE87t', '$2y$10$yzfuC79.upeZAR8wyYPII.EpFsCyOjJQg6ndlbcpJ08DCzV/LnA6q', NULL, NULL, '2017-07-25 07:50:47'),
-(86, 'Armani Zulauf', 'Kub', 'kacey34@flatley.com', NULL, NULL, NULL, NULL, NULL, NULL, 'L0JKhhlmtj', '$2y$10$SAc6PBSX45JHpc0XDiDZ0O.iU3/u7DTQI8OakYGUNgI214U9F8vKG', NULL, NULL, '2017-07-25 07:50:48'),
-(87, 'Petra Kreiger', 'Deckow', 'ustamm@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'FvYkztWSzn', '$2y$10$TVirVdtu45.cMXyrUUXaMuPikaVED0Xd.OYBQms.7PBzkGh4owCtm', NULL, NULL, '2017-07-25 07:50:48'),
-(88, 'Pink Donnelly', 'Renner', 'adrianna96@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'GjF7BTDFpY', '$2y$10$6aGcom3Ow11QD8Ft5T97ueVb4MZqXD3I106StQQsZ76164R.forre', NULL, NULL, '2017-07-25 07:50:48'),
-(89, 'Freddy Willms', 'Towne', 'erin.altenwerth@block.com', NULL, NULL, NULL, NULL, NULL, NULL, 'UflneqeCsV', '$2y$10$lApYkGjfb5wIp2rj/nQFCO.NuNLK8oHFx8ccgkq6AzGF6RbEpdEn6', NULL, NULL, '2017-07-25 07:50:48'),
-(90, 'Shannon Huels', 'Paucek', 'qkeebler@nitzsche.com', NULL, NULL, NULL, NULL, NULL, NULL, 'pmIXfpLJZP', '$2y$10$buZlg9ZePt6tMire6jpZdOZQtUEHk0LFUW2iq/Biod8tns5L73Mpq', NULL, NULL, '2017-07-25 07:50:48'),
-(91, 'Alberta Fahey', 'Bauch', 'heaney.kenna@nicolas.biz', NULL, NULL, NULL, NULL, NULL, NULL, 'A6tBbuaRvS', '$2y$10$UpDBjoQ5yK.3uB.Q/Al2E.NXYny6EynG22eD7aAcAh.RIdtNut.hC', NULL, NULL, '2017-07-25 07:50:48'),
-(92, 'Jeramy Turner', 'Stracke', 'sister.harvey@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'ROVEg7G1VL', '$2y$10$lUZdZ5Zn4nDG15xcGwEvpeYioncqtBN.OoaOQHBIsCV0emwOW7.3W', NULL, NULL, '2017-07-25 07:50:48'),
-(93, 'Keshawn Barton', 'Hackett', 'mossie30@lowe.com', NULL, NULL, NULL, NULL, NULL, NULL, '7KADeo8QuV', '$2y$10$Bd52p7oDCTSdMwc38SVSkuZmKco2IwCx3xVTfx7ZZoZU8Sh1yho.i', NULL, NULL, '2017-07-25 07:50:48');
+(94, 'Tavares Mann', 'Schmeler', 'braun.cloyd@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'xRLoBrvQfb', '$2y$10$/bEYcQu480Wj1.21jqmmO.WmfdhPBtddgq8xxGDRQXcxk8Occ8N82', NULL, NULL, '2017-07-26 07:39:12'),
+(95, 'Joannie McKenzie', 'Kassulke', 'bcollins@yahoo.com', NULL, NULL, NULL, NULL, NULL, NULL, '2DgUuMMr2x', '$2y$10$iRRBnKr2wEq5SWYykMJwe.gSiQmwnKHLcHeP6WpXurqJUga2B3TVK', NULL, NULL, '2017-07-26 07:39:12'),
+(96, 'Pearlie Gislason', 'Monahan', 'wdubuque@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'ray3pEYzfx', '$2y$10$hSQOImVnNmOkeuIrKSA0VO5gR/JN0RyeIa3yPgBrZ6lVsL7Ugocka', NULL, NULL, '2017-07-26 07:39:13'),
+(97, 'Ms. Maeve Sanford', 'Kshlerin', 'heller.warren@pfeffer.org', NULL, NULL, NULL, NULL, NULL, NULL, 'QcKNyMNVXg', '$2y$10$GxYpK99fcnNsDWQwv.UkIeQXK881prUsmUcsFD6DBqdmHTKAS2XMm', NULL, NULL, '2017-07-26 07:39:13'),
+(98, 'Miss Earnestine Bernier', 'Durgan', 'wisozk.ellen@torphy.com', NULL, NULL, NULL, NULL, NULL, NULL, '58krtar2pG', '$2y$10$eEmg/zqFVKHBDXhpB1Ek9.zfOIT8uEOx3hgz.jxzRGNXyEFgrKlZa', NULL, NULL, '2017-07-26 07:39:13'),
+(99, 'Kaycee Aufderhar V', 'Mraz', 'hkozey@johnson.com', NULL, NULL, NULL, NULL, NULL, NULL, 'oQsOJ96wqD', '$2y$10$dX833Oz/awX7z7mr8QrhYuSjEioogwylESFs1yqvgMyftNMbtsb9W', NULL, NULL, '2017-07-26 07:39:13'),
+(100, 'Prof. Terrell Littel', 'Lindgren', 'becker.yessenia@schiller.biz', NULL, NULL, NULL, NULL, NULL, NULL, 'VcpcVqieYu', '$2y$10$70Ke7qx.ReZ8LSEuB76/quHsQHve/7j5Yfh3XzcLTp2FQpFh9mo.O', NULL, NULL, '2017-07-26 07:39:13'),
+(101, 'Leonie Leannon', 'Krajcik', 'jasper27@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '97sFllRPsK', '$2y$10$tm7CYtqaG6uA4g/c9QCEkOjA5lcYuVlL10hIA/Ve1fWNNnJa8ypNW', NULL, NULL, '2017-07-26 07:39:13'),
+(102, 'Lonnie Kulas MD', 'Koss', 'xbeier@nikolaus.biz', NULL, NULL, NULL, NULL, NULL, NULL, 'x9TbFp0UJP', '$2y$10$fcoMxCI2y.a4LApyKT.yl.W5ekzs0TGI4TnHxVodxSpGlZTiTIIwe', NULL, NULL, '2017-07-26 07:39:13'),
+(103, 'Chanel Runte', 'Nolan', 'bradford53@macejkovic.biz', NULL, NULL, NULL, NULL, NULL, NULL, '3NMASCvuzE', '$2y$10$vFvpfXW3X331UEbA2sEYAe0n0lYLI9KDbMk1Ai18fZWfHzs7a/I52', NULL, NULL, '2017-07-26 07:39:13'),
+(104, 'Nelle Beahan DVM', 'Stark', 'kara40@kiehn.com', NULL, NULL, NULL, NULL, NULL, NULL, '2VItx2cjdX', '$2y$10$1aDEenxciVOwnSNpl2dYE.QMGzOhk6jmGpitbGsn3ZJZ668Kki4qq', NULL, NULL, '2017-07-26 07:39:13'),
+(105, 'Melody Sporer', 'Brekke', 'morissette.amara@towne.com', NULL, NULL, NULL, NULL, NULL, NULL, 'PahqQHK6bO', '$2y$10$o72oV1XKu4ZnFAVC7UtOSOTCOnBK.HtbkIimGZnUkU3AJucd.Z8Qa', NULL, NULL, '2017-07-26 07:39:13'),
+(106, 'Charity Pouros', 'Kulas', 'niko39@nienow.org', NULL, NULL, NULL, NULL, NULL, NULL, 'ORrrjGMcCs', '$2y$10$My0SB0mnir370AaK9oQiZu6LAd9qZZfJd3FuylkDo0jUSFSPFEsWq', NULL, NULL, '2017-07-26 07:39:14'),
+(107, 'Aglae Gutkowski', 'Nikolaus', 'gutmann.leda@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'JXxqkBC048', '$2y$10$WBr1T6iM12ZSWtlRGFVvpOT/vXoCFYHdiw9btQquxOSjS.3vMqMiS', NULL, NULL, '2017-07-26 07:39:14'),
+(108, 'Brent Kulas', 'Hoppe', 'clovis.gutmann@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'fWIF37kmX6', '$2y$10$NfGyI8dMewqnHq/s5l0ZUu4Cabn8smaPH.Im8smHESrpxh.RLEGWC', NULL, NULL, '2017-07-26 07:39:14'),
+(109, 'Randal Turcotte', 'McDermott', 'becker.wyatt@yahoo.com', NULL, NULL, NULL, NULL, NULL, NULL, 'faSwfsHSYc', '$2y$10$FfiVCtADICGeNFaFI3jsKuBn0uiaGzHn.d/JOlwyP3C3R6kkcdz6q', NULL, NULL, '2017-07-26 07:39:14'),
+(110, 'David Streich', 'Huel', 'kara92@jones.com', NULL, NULL, NULL, NULL, NULL, NULL, 'ZBgbV7wbNb', '$2y$10$AkWLpCIiG5cedjVpetLL5u/LCeCYVpdHq9nSAa5GVbXipJ9rlqlKK', NULL, NULL, '2017-07-26 07:39:14'),
+(111, 'Prof. Jaycee Bashirian PhD', 'Koss', 'watsica.brody@schmidt.com', NULL, NULL, NULL, NULL, NULL, NULL, 'nZ2HV3Juyf', '$2y$10$J4JwF2sDc/nqD/5uzfRtKOprs2oVragTkkDyET7OU6hRgkAioJPUC', NULL, NULL, '2017-07-26 07:39:14'),
+(112, 'Felix Green V', 'Leffler', 'bbeier@yahoo.com', NULL, NULL, NULL, NULL, NULL, NULL, '4G93m3YWol', '$2y$10$HYu5iA.gPmUdkjIlV3mo8uyS6/UlPnDpoVuLVBcOrIdF.ehV930s.', NULL, NULL, '2017-07-26 07:39:14'),
+(113, 'Arvid Stanton', 'Romaguera', 'wweimann@thompson.net', NULL, NULL, NULL, NULL, NULL, NULL, 'LsxIYJMS8C', '$2y$10$8oYvfmRbMOut/7IwqO6ZHu06RlxdW0m32JL6b7qpjVpF1lTdH/.Ku', NULL, NULL, '2017-07-26 07:39:14'),
+(114, 'Prof. Benjamin Lind V', 'Wintheiser', 'swaniawski.danny@walter.com', NULL, NULL, NULL, NULL, NULL, NULL, 'AXdKYcpHUs', '$2y$10$snQfou9K1tTt2YZmgacHjumRg0ss9.OTdxehqjSpEPgagYARYP2iG', NULL, NULL, '2017-07-26 07:39:14'),
+(115, 'Reinhold Kshlerin', 'Goldner', 'reuben.kutch@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '5vEE64GsRO', '$2y$10$m7smHkQ03jYb/h5/ObA5Y.l5UGwG9cplXT9R0i3jU7yp7fDjFTXcG', NULL, NULL, '2017-07-26 07:39:14'),
+(116, 'Chaz Mann', 'Cruickshank', 'botsford.alex@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'jLyggEV3DN', '$2y$10$cI/j/gnkXZICbZYWOP6FeeZ0kTJ2AxNSusA64ppK/taGwuoqB6GCS', NULL, NULL, '2017-07-26 07:39:15'),
+(117, 'Katherine Brakus', 'Spencer', 'harold.sporer@ankunding.com', NULL, NULL, NULL, NULL, NULL, NULL, 'cOPn7wT3tz', '$2y$10$1ZI6m.TQDOzsNV8oPW0oauQwPTwn9gWu8rbulaZZXjjwcQq/aVYRW', NULL, NULL, '2017-07-26 07:39:15'),
+(118, 'Lexus Nolan', 'Wisoky', 'klocko.marco@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'ZypIcPLgAo', '$2y$10$O5.DrdLp8iPB6W/v19F/WOdvM9I38kATfK9nCG9Tv5PZZbTt2ukWG', NULL, NULL, '2017-07-26 07:39:15'),
+(119, 'Sean Bogisich II', 'Moen', 'brianne.goldner@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '8gj7OQymFz', '$2y$10$s/3EJj5ILdKuSh53oTf8reW.KvlbF.RwW/tefA4A8rsGolDR1KG1O', NULL, NULL, '2017-07-26 07:39:15'),
+(120, 'Prof. Sim Funk Jr.', 'Kub', 'zula22@langworth.com', NULL, NULL, NULL, NULL, NULL, NULL, 'JAKPQ0FTGt', '$2y$10$viPJvN8PcTbnR6JhDh5t2.HSpZ53/MTTou18IIJ1HhlgGp1isgw9O', NULL, NULL, '2017-07-26 07:39:15'),
+(121, 'Dr. Krystina Predovic', 'Kohler', 'dmann@yahoo.com', NULL, NULL, NULL, NULL, NULL, NULL, 'LKk6rFC0v3', '$2y$10$NiJZSe51./ylROx0xWX5eOdblF/Te/NipFZkK.9adZ4kCnItuGODy', NULL, NULL, '2017-07-26 07:39:15'),
+(122, 'Gisselle Schumm', 'Barton', 'iyundt@hills.com', NULL, NULL, NULL, NULL, NULL, NULL, 'HfrgrpggcX', '$2y$10$MZlqOXK0uXaiGje9cyYq0.6cPAQKmXLJ0JzuS71Aj/Tcjib2OKOVi', NULL, NULL, '2017-07-26 07:39:15'),
+(123, 'Dr. Claude Stark', 'Hermiston', 'njerde@gottlieb.com', NULL, NULL, NULL, NULL, NULL, NULL, 'HPjDIG1jIl', '$2y$10$RoqGaPjbBdHOh7en1pGRAepzg5qu5CcuTd4y37Xf2PVNDeS4EhxUq', NULL, NULL, '2017-07-26 07:39:15');
 
 --
 -- Indexes for dumped tables
@@ -262,7 +263,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tags`
 --
@@ -272,7 +273,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
