@@ -46,4 +46,46 @@
 
 .banner_image {
 	width: 100px;
+	padding: 5px;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid rgb(228, 228, 228);
+    text-align: center;
+    /*width: 500px;*/
+}
+
+table th, td {
+	width: 180px;
+}
+
+th {
+	height: 50px;
+}
+
+.article_id {
+	width: 100px;
+}
+
+.delete_btn {
+	width: 70px;
+}
+
+/* --------- ARTICLE DASHBOARD ------------ */
+
+.modal-content {
+	text-align: left;
+}
+
+#edit_title {
+	width: 400px;
+}
+
+.modal-footer {
+	padding: 10px;
+}
+

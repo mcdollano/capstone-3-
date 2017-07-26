@@ -15,6 +15,8 @@ Route::get('/admin', function() {
     return view('template');
 });
 
-
 Route::get('/articles', 'ArticlesController@showArticles');
 
+Route::post('/editArticle/{blog_id}', 'ArticlesController@editArticle');
+
+Route::post('/deleteArticle/{blog_id}','ArticlesController@deleteArticle');

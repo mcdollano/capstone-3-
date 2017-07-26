@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BlogsTagsTable extends Migration
+class AddUserToBlogs extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class BlogsTagsTable extends Migration
      */
     public function up()
     {
-       // Schema::table('tags', function (Blueprint $table) {
-       //      $table->string('blog_id');
-
-       //  });
+        Schema::table('articles', function (Blueprint $table) {
+            $table->string('user_id');
+            // $table->string('blog_id');
+        });
     }
 
     /**
