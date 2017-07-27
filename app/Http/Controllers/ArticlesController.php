@@ -14,30 +14,51 @@ class ArticlesController extends Controller
     	$blogs = Articles::all();
     	$tags = Tags::all();
     	$comments = Comments::all();
-    	//dd($blogs);
 
     	return view('articles', compact('blogs','tags','comments'));
     }
 
     function editArticle(Request $request, $blog_id){
     	$article = Articles::find($blog_id);
-    	//dd($request->file('edit_banner_image'));
     	$request->file('edit_banner_image')->move("storage/", 'try');
-
-    	// if(isset($request->edit_banner_image)){
-    	// 	$article->banner_image = "storage/" . $request->input('edit_banner_image');
-    	// }
-    	
     	$article->title = $request->input('edit_title');
-    	
   		$article->save();
+
        	return back();
     }
 
     function deleteArticle(Request $request, $blog_id){
     	$delete_article = Articles::find($blog_id);
-    	// dd($delete_article);
     	$delete_article->delete();
+
     	return back();
     }
+ 
+    function addArticle(Request $request){
+
+        $new_article = new Articles();
+        // $blog_id = 48;
+        // $tag_id = 11;
+        // dd($id);
+       
+        $new_article->user_id=97;
+        $new_article->title=$request->write_title;
+        $new_article->caption=$request->write_caption;
+        $new_article->banner_image=$request->write_banner_image;
+        $new_article->content=$request->write_content;
+         
+        /* -- new tag -- */
+        $new_tag->tag_name=$request->write_tags;
+        $new_tag->save();
+        $new_article->save();
+
+        $new_blogtags = new BlogsTags();
+        $new_blogtags->tags()->attach($blog_id,$tag_id);
+        $new_blogtags->save();
+
+        return back();
+
+    }
+
+    
 }

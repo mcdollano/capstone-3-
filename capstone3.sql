@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2017 at 11:14 AM
+-- Generation Time: Jul 27, 2017 at 10:59 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -33,8 +33,7 @@ CREATE TABLE `articles` (
   `caption` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `banner_image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `publish_date` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `article_views` int(11) NOT NULL,
+  `article_views` int(11) NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `user_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -44,35 +43,62 @@ CREATE TABLE `articles` (
 -- Dumping data for table `articles`
 --
 
-INSERT INTO `articles` (`blog_id`, `category`, `title`, `caption`, `banner_image`, `content`, `publish_date`, `article_views`, `created_at`, `updated_at`, `user_id`) VALUES
-(3, NULL, 'I\'ve said to her.', 'She said the book,\' said I suppose it.', 'storage/prof_pic.jpg', 'King, with diamonds, and straightening itself up again! Let me very gravely, \'and they lessen from the sea, \'and I\'ll come back to be the Lory, who.', '1988-12-17 05:01:07', 105, NULL, '2017-07-26 00:29:06', '97'),
-(4, NULL, 'This speech caused.', 'Gryphon, sighing in here the Gryphon,.', 'storage/coach4.png', 'I hadn\'t mentioned me the little white kid gloves, and, as she went mad, you did,\' said the night? Let me he had followed the other side will you so.', '1977-11-26 23:21:18', 42, NULL, '2017-07-26 00:59:49', '97'),
-(5, NULL, 'Classics master,.', 'I\'m not looking across his arm for.', 'storage/', 'White Rabbit, who will be ashamed of a whiting before.\' \'I thought Alice. \'Why, what makes my dears! It\'s enough to shrink any more like what it.', '1971-07-26 11:05:53', 151, NULL, '2017-07-26 01:05:25', '97'),
-(6, NULL, 'Alice timidly..', 'Alice\'s elbow against her once in.', 'http://lorempixel.com/640/360/?67769', 'Dodo, \'the world go down--Here, Bill! the March Hare interrupted, yawning. \'I\'m NOT a week: HE went on, \'you know who was the Caterpillar seemed to.', '2014-09-18 23:38:29', 65, NULL, NULL, '98'),
-(7, NULL, 'Alice. \'I won\'t!\'.', 'Alice looked very rude.\' The.', 'http://lorempixel.com/640/360/?50327', 'While the moment the roof bear?--Mind that beautiful Soup? Pennyworth only wish I shall fall NEVER come to work shaking it was in a great many.', '2012-05-24 01:36:02', 56, NULL, NULL, '98'),
-(8, NULL, 'The Mock Turtle..', 'Cat, \'a great disgust, and such as,.', 'http://lorempixel.com/640/360/?15838', 'Alice felt very lonely on in prison,\' the Queen shrieked out. \'Behead that is May it would be Mabel, I\'ll write with wonder what Latitude or \'Off.', '2008-04-24 10:01:13', 191, NULL, NULL, '98'),
-(9, NULL, 'Hatter. \'You ought.', 'HER about the ground near the Hatter.', 'http://lorempixel.com/640/360/?76951', 'The long time she got settled down at in the Caterpillar. Alice was in by mice you know?\' said to them so quickly as she said the Rabbit put.', '1986-04-23 07:28:45', 167, NULL, NULL, '98'),
-(10, NULL, 'I wonder what they.', 'Queen in it, and they live about it. I.', 'http://lorempixel.com/640/360/?67600', 'Knave \'Turn them in a Gryphon went on, with fur. It was silence instantly, and Alice\'s shoulder, and no larger: still it was,\' he went on their.', '1995-06-07 04:54:40', 190, NULL, NULL, '99'),
-(11, NULL, 'The cook and she.', 'There ought to the mushroom growing.', 'http://lorempixel.com/640/360/?42906', 'March Hare. \'Sixteenth,\' added the sky. Twinkle, twinkle--\"\' Here was in the Caterpillar sternly. \'Explain all her riper years, the Mock Turtle with.', '1996-09-28 14:01:14', 96, NULL, NULL, '99'),
-(12, NULL, 'I know what I wish.', 'Alice. \'What do you myself,\' said to.', 'http://lorempixel.com/640/360/?70002', 'Alice joined in particular. \'She\'d soon make out what makes me at last: \'and that she suddenly down, all that.\' \'With extras?\' asked in a moment:.', '2010-11-05 15:03:32', 146, NULL, NULL, '99'),
-(13, NULL, 'Queen. \'Their.', 'Gryphon, \'she wants cutting,\' said the.', 'http://lorempixel.com/640/360/?73365', 'Hatter: \'as I shall be a very absurd, but she found herself hastily, and was over. Alice did not answer to say to tell her hand, it would be denied,.', '1983-09-03 17:49:37', 171, NULL, NULL, '99'),
-(14, NULL, 'THE COURT.\'.', 'Mouse\'s tail; \'but I don\'t believe you.', 'http://lorempixel.com/640/360/?27100', 'King. Here was some of the Dodo suddenly upon a trumpet in saying anything to work nibbling first saw one, time he went on the soldiers did. After a.', '1994-05-17 01:12:30', 18, NULL, NULL, '100'),
-(15, NULL, 'Like a hundred.', 'Alice, who felt a really offended. \'We.', 'http://lorempixel.com/640/360/?87038', 'Because he repeated the Hatter. This question certainly was just upset the whole thing, and tried to say but the rest were placed along in search of.', '1981-07-23 09:35:20', 77, NULL, NULL, '100'),
-(16, NULL, 'Caucus-race?\' said.', 'King. The Mock Turtle yawned and.', 'http://lorempixel.com/640/360/?67097', 'Alice, (she was holding, and all over the soldiers carrying the March Hare said the large rabbit-hole under it, he said the window, and cried..', '1987-01-01 02:51:46', 39, NULL, NULL, '100'),
-(17, NULL, 'Bill! I suppose I.', 'And then, if the Gryphon. \'Of course.', 'http://lorempixel.com/640/360/?60170', 'Wonderland of knot, and Queens, and then, \'we went to other two feet high. CHAPTER V. Advice from being drowned in the Mouse, do to herself; \'the.', '2001-08-19 10:03:02', 73, NULL, NULL, '100'),
-(18, NULL, 'On every now here.', 'THEY GAVE HIM TO BE TRUE--\" that\'s all.', 'http://lorempixel.com/640/360/?18402', 'Alice was all sorts of killing somebody, so VERY long breath, and the distance, sitting sad tale!\' said the moment she was losing her draw water had.', '2006-06-12 11:06:30', 43, NULL, NULL, '100'),
-(19, NULL, 'It was the effect.', 'Alice was more bread-and-butter--\'.', 'http://lorempixel.com/640/360/?54569', 'And she began, in my own. I\'m somebody else\"--but, oh dear!\' cried the teapot. \'At any rate, there\'s no doubt: only rustling in it very clear way.', '1993-04-11 00:46:51', 118, NULL, NULL, '100'),
-(20, NULL, 'Alice, \'and the.', 'NOT a low, trembling voice:-- \'I must.', 'http://lorempixel.com/640/360/?64290', 'I don\'t know,\' said Alice thought Alice, \'they\'re sure I heard her try the fan and turns out of life. Indeed, she began, \'for bringing herself.', '2005-05-21 13:31:37', 8, NULL, NULL, '100'),
-(21, NULL, 'T!\' said the.', 'I hadn\'t quite understand it was,\' the.', 'http://lorempixel.com/640/360/?87331', 'Alice noticed, had said in the Mock Turtle to do THAT direction,\' the fan and it. \'That\'s right, I\'m here! It\'ll be different,\' said the book,\'.', '2009-02-01 03:10:49', 57, NULL, NULL, '100'),
-(22, NULL, 'I\'m certain! I.', 'The Cat\'s head down without trying.', 'http://lorempixel.com/640/360/?62236', 'Dinah! I want to Alice: \'--where\'s the face. \'Very,\' said to France-- Then followed them, after hunting all that,\' he went on. \'I won\'t!\' said the.', '1978-09-23 00:22:29', 86, NULL, NULL, '100'),
-(23, NULL, 'Queen said the.', 'Will you, won\'t you know,\' said to.', 'http://lorempixel.com/640/360/?72159', 'And the mouse to do almost anything more happened, she jumped up and thought Alice. \'Why the same thing that she could, if it sounds uncommon.', '1993-09-28 17:36:39', 47, NULL, NULL, '100'),
-(24, NULL, 'I to the door, she.', 'THEN--she found and not much about.', 'http://lorempixel.com/640/360/?94914', 'Five, in a kind of her way back, the Mock Turtle said: \'I\'m glad I\'ve been (Before she had its voice outside, and said Alice, as the month is.', '1984-11-19 09:16:19', 135, NULL, NULL, '100'),
-(25, NULL, 'What WILL become.', 'Alice looked at the real Turtle.\'.', 'http://lorempixel.com/640/360/?41133', 'What WILL do anything to see it out one eye, How queer noises, would you grow larger, it sat down, and the Mock Turtle to work shaking it up both.', '2006-12-03 01:06:14', 136, NULL, NULL, '100'),
-(26, NULL, 'She went back to.', 'They all the last the King, and.', 'http://lorempixel.com/640/360/?13063', 'HE was.\' \'I only sobbing,\' she asked. \'That WAS when I meant,\' the March Hare went on the chimney, has won, and very soon left alive!\' She generally.', '1987-10-17 09:05:30', 14, NULL, NULL, '100'),
-(27, NULL, 'Majesty?\' he wore.', 'VERY long hookah, and Northumbria--\"\'.', 'http://lorempixel.com/640/360/?92870', 'NOT, being alive; for eggs, certainly,\' said as she walked off the wise little chin. However, when she was just now in the soup, and Alice\'s great.', '1997-01-13 01:06:50', 106, NULL, NULL, '100'),
-(28, NULL, 'THE.', 'King said Alice. \'You should chance to.', 'http://lorempixel.com/640/360/?39015', 'I know all that she stood near. The King eagerly, and she got it was rather a large birds tittered audibly. \'What do you know--and then after.', '1980-08-19 10:19:52', 94, NULL, NULL, '100'),
-(29, NULL, 'Lory. Alice for.', 'King eagerly, and the Mock Turtle.', 'http://lorempixel.com/640/360/?35265', 'And pour the Gryphon, and, as the moral of her anger as it myself to dull and walked off outside,\' the air, and vanished completely. Very soon made.', '1987-07-15 05:34:18', 108, NULL, NULL, '100'),
-(30, NULL, 'Gryphon as the.', 'TOOK A bright eager to repeat.', 'http://lorempixel.com/640/360/?65852', 'As soon found at once. \'Give your Majesty,\' said to her answer. \'They\'re done that, you take him to say \"With what you think that she found herself.', '1980-11-22 19:26:54', 107, NULL, NULL, '100');
+INSERT INTO `articles` (`blog_id`, `category`, `title`, `caption`, `banner_image`, `content`, `article_views`, `created_at`, `updated_at`, `user_id`) VALUES
+(3, NULL, 'I\'ve said to her.', 'She said the book,\' said I suppose it.', 'storage/prof_pic.jpg', 'King, with diamonds, and straightening itself up again! Let me very gravely, \'and they lessen from the sea, \'and I\'ll come back to be the Lory, who.', 105, NULL, '2017-07-26 00:29:06', '97'),
+(4, NULL, 'This speech caused.', 'Gryphon, sighing in here the Gryphon,.', 'storage/coach4.png', 'I hadn\'t mentioned me the little white kid gloves, and, as she went mad, you did,\' said the night? Let me he had followed the other side will you so.', 42, NULL, '2017-07-26 00:59:49', '97'),
+(5, NULL, 'Classics master,.', 'I\'m not looking across his arm for.', 'storage/', 'White Rabbit, who will be ashamed of a whiting before.\' \'I thought Alice. \'Why, what makes my dears! It\'s enough to shrink any more like what it.', 151, NULL, '2017-07-26 01:05:25', '97'),
+(6, NULL, 'Alice timidly..', 'Alice\'s elbow against her once in.', 'http://lorempixel.com/640/360/?67769', 'Dodo, \'the world go down--Here, Bill! the March Hare interrupted, yawning. \'I\'m NOT a week: HE went on, \'you know who was the Caterpillar seemed to.', 65, NULL, NULL, '98'),
+(7, NULL, 'Alice. \'I won\'t!\'.', 'Alice looked very rude.\' The.', 'http://lorempixel.com/640/360/?50327', 'While the moment the roof bear?--Mind that beautiful Soup? Pennyworth only wish I shall fall NEVER come to work shaking it was in a great many.', 56, NULL, NULL, '98'),
+(8, NULL, 'The Mock Turtle..', 'Cat, \'a great disgust, and such as,.', 'http://lorempixel.com/640/360/?15838', 'Alice felt very lonely on in prison,\' the Queen shrieked out. \'Behead that is May it would be Mabel, I\'ll write with wonder what Latitude or \'Off.', 191, NULL, NULL, '98'),
+(9, NULL, 'Hatter. \'You ought.', 'HER about the ground near the Hatter.', 'http://lorempixel.com/640/360/?76951', 'The long time she got settled down at in the Caterpillar. Alice was in by mice you know?\' said to them so quickly as she said the Rabbit put.', 167, NULL, NULL, '98'),
+(10, NULL, 'I wonder what they.', 'Queen in it, and they live about it. I.', 'http://lorempixel.com/640/360/?67600', 'Knave \'Turn them in a Gryphon went on, with fur. It was silence instantly, and Alice\'s shoulder, and no larger: still it was,\' he went on their.', 190, NULL, NULL, '99'),
+(11, NULL, 'The cook and she.', 'There ought to the mushroom growing.', 'http://lorempixel.com/640/360/?42906', 'March Hare. \'Sixteenth,\' added the sky. Twinkle, twinkle--\"\' Here was in the Caterpillar sternly. \'Explain all her riper years, the Mock Turtle with.', 96, NULL, NULL, '99'),
+(12, NULL, 'I know what I wish.', 'Alice. \'What do you myself,\' said to.', 'http://lorempixel.com/640/360/?70002', 'Alice joined in particular. \'She\'d soon make out what makes me at last: \'and that she suddenly down, all that.\' \'With extras?\' asked in a moment:.', 146, NULL, NULL, '99'),
+(13, NULL, 'Queen. \'Their.', 'Gryphon, \'she wants cutting,\' said the.', 'http://lorempixel.com/640/360/?73365', 'Hatter: \'as I shall be a very absurd, but she found herself hastily, and was over. Alice did not answer to say to tell her hand, it would be denied,.', 171, NULL, NULL, '99'),
+(14, NULL, 'THE COURT.\'.', 'Mouse\'s tail; \'but I don\'t believe you.', 'http://lorempixel.com/640/360/?27100', 'King. Here was some of the Dodo suddenly upon a trumpet in saying anything to work nibbling first saw one, time he went on the soldiers did. After a.', 18, NULL, NULL, '100'),
+(15, NULL, 'Like a hundred.', 'Alice, who felt a really offended. \'We.', 'http://lorempixel.com/640/360/?87038', 'Because he repeated the Hatter. This question certainly was just upset the whole thing, and tried to say but the rest were placed along in search of.', 77, NULL, NULL, '100'),
+(16, NULL, 'Caucus-race?\' said.', 'King. The Mock Turtle yawned and.', 'http://lorempixel.com/640/360/?67097', 'Alice, (she was holding, and all over the soldiers carrying the March Hare said the large rabbit-hole under it, he said the window, and cried..', 39, NULL, NULL, '100'),
+(17, NULL, 'Bill! I suppose I.', 'And then, if the Gryphon. \'Of course.', 'http://lorempixel.com/640/360/?60170', 'Wonderland of knot, and Queens, and then, \'we went to other two feet high. CHAPTER V. Advice from being drowned in the Mouse, do to herself; \'the.', 73, NULL, NULL, '100'),
+(18, NULL, 'On every now here.', 'THEY GAVE HIM TO BE TRUE--\" that\'s all.', 'http://lorempixel.com/640/360/?18402', 'Alice was all sorts of killing somebody, so VERY long breath, and the distance, sitting sad tale!\' said the moment she was losing her draw water had.', 43, NULL, NULL, '100'),
+(19, NULL, 'It was the effect.', 'Alice was more bread-and-butter--\'.', 'http://lorempixel.com/640/360/?54569', 'And she began, in my own. I\'m somebody else\"--but, oh dear!\' cried the teapot. \'At any rate, there\'s no doubt: only rustling in it very clear way.', 118, NULL, NULL, '100'),
+(20, NULL, 'Alice, \'and the.', 'NOT a low, trembling voice:-- \'I must.', 'http://lorempixel.com/640/360/?64290', 'I don\'t know,\' said Alice thought Alice, \'they\'re sure I heard her try the fan and turns out of life. Indeed, she began, \'for bringing herself.', 8, NULL, NULL, '100'),
+(21, NULL, 'T!\' said the.', 'I hadn\'t quite understand it was,\' the.', 'http://lorempixel.com/640/360/?87331', 'Alice noticed, had said in the Mock Turtle to do THAT direction,\' the fan and it. \'That\'s right, I\'m here! It\'ll be different,\' said the book,\'.', 57, NULL, NULL, '100'),
+(22, NULL, 'I\'m certain! I.', 'The Cat\'s head down without trying.', 'http://lorempixel.com/640/360/?62236', 'Dinah! I want to Alice: \'--where\'s the face. \'Very,\' said to France-- Then followed them, after hunting all that,\' he went on. \'I won\'t!\' said the.', 86, NULL, NULL, '100'),
+(23, NULL, 'Queen said the.', 'Will you, won\'t you know,\' said to.', 'http://lorempixel.com/640/360/?72159', 'And the mouse to do almost anything more happened, she jumped up and thought Alice. \'Why the same thing that she could, if it sounds uncommon.', 47, NULL, NULL, '100'),
+(24, NULL, 'I to the door, she.', 'THEN--she found and not much about.', 'http://lorempixel.com/640/360/?94914', 'Five, in a kind of her way back, the Mock Turtle said: \'I\'m glad I\'ve been (Before she had its voice outside, and said Alice, as the month is.', 135, NULL, NULL, '100'),
+(25, NULL, 'What WILL become.', 'Alice looked at the real Turtle.\'.', 'http://lorempixel.com/640/360/?41133', 'What WILL do anything to see it out one eye, How queer noises, would you grow larger, it sat down, and the Mock Turtle to work shaking it up both.', 136, NULL, NULL, '100'),
+(26, NULL, 'She went back to.', 'They all the last the King, and.', 'http://lorempixel.com/640/360/?13063', 'HE was.\' \'I only sobbing,\' she asked. \'That WAS when I meant,\' the March Hare went on the chimney, has won, and very soon left alive!\' She generally.', 14, NULL, NULL, '100'),
+(27, NULL, 'Majesty?\' he wore.', 'VERY long hookah, and Northumbria--\"\'.', 'http://lorempixel.com/640/360/?92870', 'NOT, being alive; for eggs, certainly,\' said as she walked off the wise little chin. However, when she was just now in the soup, and Alice\'s great.', 106, NULL, NULL, '100'),
+(28, NULL, 'THE.', 'King said Alice. \'You should chance to.', 'http://lorempixel.com/640/360/?39015', 'I know all that she stood near. The King eagerly, and she got it was rather a large birds tittered audibly. \'What do you know--and then after.', 94, NULL, NULL, '100'),
+(29, NULL, 'Lory. Alice for.', 'King eagerly, and the Mock Turtle.', 'http://lorempixel.com/640/360/?35265', 'And pour the Gryphon, and, as the moral of her anger as it myself to dull and walked off outside,\' the air, and vanished completely. Very soon made.', 108, NULL, NULL, '100'),
+(30, NULL, 'Gryphon as the.', 'TOOK A bright eager to repeat.', 'http://lorempixel.com/640/360/?65852', 'As soon found at once. \'Give your Majesty,\' said to her answer. \'They\'re done that, you take him to say \"With what you think that she found herself.', 107, NULL, NULL, '100'),
+(31, NULL, 'gdfgdf', 'dfgdfg', 'coach5.png', 'dfgdfgdfg', 0, '2017-07-26 21:42:08', '2017-07-26 21:42:08', '97'),
+(32, NULL, 'fdgdfg', 'dfgf', 'coach4.png', 'dfgfgdfgdfgdf', 0, '2017-07-26 21:43:14', '2017-07-26 21:43:14', '97'),
+(33, NULL, 'try', 'asdasd', 'coach4.png', 'asdasd', 0, '2017-07-26 21:44:32', '2017-07-26 21:45:34', '97'),
+(34, NULL, 'try2', 'try2', 'storage/gshock1.png', 'try2', 0, '2017-07-26 21:59:15', '2017-07-26 21:59:15', '97'),
+(35, NULL, 'tags try', 'tags try', 'herschel_black.png', 'tags try', 0, '2017-07-26 22:58:27', '2017-07-26 22:58:27', '97'),
+(36, NULL, 'asdasdasd', 'adsasdasd', 'coach4.png', 'asdasdasd', 0, '2017-07-26 22:59:42', '2017-07-26 22:59:42', '97'),
+(37, NULL, 'trytag', 'trytag', 'coach4.png', 'trytag', 0, '2017-07-26 23:02:55', '2017-07-26 23:02:55', '97'),
+(38, NULL, 'asdasdasd', 'adsasdasdasd', 'gshock5.png', 'asdasdasd', 0, '2017-07-26 23:05:37', '2017-07-26 23:05:37', '97'),
+(39, NULL, 'hagsdhgas', 'ashgdjhdasg', 'coach4.png', 'asdasdasd', 0, '2017-07-26 23:09:43', '2017-07-26 23:09:43', '97'),
+(40, NULL, 'adasd', 'asdasd', 'coach3.png', 'asdasdasd', 0, '2017-07-26 23:54:56', '2017-07-26 23:54:56', '97'),
+(41, NULL, 'asdasd', 'asdasd', 'gshock5.png', 'asdasd', 0, '2017-07-27 00:00:14', '2017-07-27 00:00:14', '97'),
+(42, NULL, 'qeqweqweqwe', 'qweqweqweqwe', 'coach3.png', 'qweqweqweqwe', 0, '2017-07-27 00:22:55', '2017-07-27 00:22:55', '97'),
+(43, NULL, 'asdasd', 'asdasd', 'coach4.png', 'asdasdasd', 0, '2017-07-27 00:30:37', '2017-07-27 00:30:37', '97');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blogs_tags`
+--
+
+CREATE TABLE `blogs_tags` (
+  `blogs_tags_id` int(10) UNSIGNED NOT NULL,
+  `blog_id` int(11) NOT NULL,
+  `tags_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -112,8 +138,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2017_07_24_084630_create_tags_table', 1),
 (5, '2017_07_24_084730_create_comments_table', 1),
 (6, '2017_07_25_011809_edit_comments_table', 2),
-(7, '2017_07_25_013242_blogs_tags_table', 3),
-(8, '2017_07_26_022931_AddUserToBlogs', 3);
+(8, '2017_07_26_022931_AddUserToBlogs', 3),
+(9, '2017_07_27_063040_createBlogsTagsTable', 4);
 
 -- --------------------------------------------------------
 
@@ -137,10 +163,21 @@ CREATE TABLE `tags` (
   `tags_id` int(10) UNSIGNED NOT NULL,
   `tag_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `user_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `blog_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tags`
+--
+
+INSERT INTO `tags` (`tags_id`, `tag_name`, `created_at`, `updated_at`) VALUES
+(1, 'Career', '2017-07-26 23:02:55', '2017-07-26 23:02:55'),
+(2, 'Entrepreneurship', '2017-07-26 23:05:37', '2017-07-26 23:05:37'),
+(3, 'Technology', '2017-07-26 23:09:43', '2017-07-26 23:09:43'),
+(4, 'Philosophy', '2017-07-26 23:54:56', '2017-07-26 23:54:56'),
+(5, 'Startup', '2017-07-27 00:00:14', '2017-07-27 00:00:14'),
+(6, 'Internet', '2017-07-27 00:22:55', '2017-07-27 00:22:55'),
+(7, 'asdasdasd', '2017-07-27 00:30:37', '2017-07-27 00:30:37');
 
 -- --------------------------------------------------------
 
@@ -213,6 +250,12 @@ ALTER TABLE `articles`
   ADD PRIMARY KEY (`blog_id`);
 
 --
+-- Indexes for table `blogs_tags`
+--
+ALTER TABLE `blogs_tags`
+  ADD PRIMARY KEY (`blogs_tags_id`);
+
+--
 -- Indexes for table `comments`
 --
 ALTER TABLE `comments`
@@ -253,7 +296,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `blog_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `blog_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+--
+-- AUTO_INCREMENT for table `blogs_tags`
+--
+ALTER TABLE `blogs_tags`
+  MODIFY `blogs_tags_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `comments`
 --
@@ -263,12 +311,12 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `tags_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `tags_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `users`
 --

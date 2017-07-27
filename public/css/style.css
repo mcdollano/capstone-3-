@@ -89,3 +89,30 @@ th {
 	padding: 10px;
 }
 
+.articles_heading_container {
+	width: 100vw;
+	height: 50px;
+	/*background-color: rgb(67, 129, 98);*/
+}
+
+#add_article_button {
+	margin-left: 270px;
+	margin-bottom: 10px;
+}
+
+/* ------------- WRITE NEW ARTICLE ---------------*/
+
+.write_article_container {
+	margin-left: 270px;
+	padding-top: 20px;
+}
+
+#write_title, #write_caption, #write_tags {
+	max-width: 500px;
+}
+
+#write_content {
+	width: 700px;
+	height: 500px;
+	/*text-align: left;*/
+}

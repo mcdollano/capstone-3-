@@ -1,5 +1,13 @@
 @extends ("template")
 	@section("articles")
+	<div class="articles_heading_container">
+		
+	</div>
+	<a href='{{url("/writeArticle")}}'>
+		<button type="button" class="btn btn-success" id="add_article_button">
+			<p>Write a new article</p>
+		</button>
+	</a>
 	<div class="articles_container_right">
 		<table class="article_table_container">
 			<tr>

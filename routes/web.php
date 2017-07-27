@@ -20,3 +20,10 @@ Route::get('/articles', 'ArticlesController@showArticles');
 Route::post('/editArticle/{blog_id}', 'ArticlesController@editArticle');
 
 Route::post('/deleteArticle/{blog_id}','ArticlesController@deleteArticle');
+
+Route::get('/writeArticle',function() {
+	return view('write_article');
+});
+
+Route::post('/saveArticle', 'ArticlesController@addArticle');
+
