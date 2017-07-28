@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2017 at 10:59 AM
+-- Generation Time: Jul 28, 2017 at 10:46 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -84,7 +84,11 @@ INSERT INTO `articles` (`blog_id`, `category`, `title`, `caption`, `banner_image
 (40, NULL, 'adasd', 'asdasd', 'coach3.png', 'asdasdasd', 0, '2017-07-26 23:54:56', '2017-07-26 23:54:56', '97'),
 (41, NULL, 'asdasd', 'asdasd', 'gshock5.png', 'asdasd', 0, '2017-07-27 00:00:14', '2017-07-27 00:00:14', '97'),
 (42, NULL, 'qeqweqweqwe', 'qweqweqweqwe', 'coach3.png', 'qweqweqweqwe', 0, '2017-07-27 00:22:55', '2017-07-27 00:22:55', '97'),
-(43, NULL, 'asdasd', 'asdasd', 'coach4.png', 'asdasdasd', 0, '2017-07-27 00:30:37', '2017-07-27 00:30:37', '97');
+(43, NULL, 'asdasd', 'asdasd', 'coach4.png', 'asdasdasd', 0, '2017-07-27 00:30:37', '2017-07-27 00:30:37', '97'),
+(44, NULL, 'asdas', 'asdasdasd', 'coach4.png', 'asdasdasd', 0, '2017-07-27 19:14:24', '2017-07-27 19:14:24', '97'),
+(45, NULL, 'asdasdasdasdasdas', 'asdasdasd', 'coach5.png', 'asdasdd', 0, '2017-07-27 19:14:58', '2017-07-27 19:14:58', '97'),
+(46, NULL, 'text editor', 'text editor', 'coach5.png', '<p><strong>text editortext editortext </strong></p>\r\n<p>&nbsp;</p>\r\n<h1><strong>editortext editortext editortext editortext editor</strong></h1>', 0, '2017-07-27 20:45:43', '2017-07-27 20:45:43', '97'),
+(47, NULL, 'ahsdghjgasdjh', 'asjdhgajghsdjasd', '2.png', '<p>asdasdasdasd</p>', 0, '2017-07-28 00:08:31', '2017-07-28 00:08:31', '97');
 
 -- --------------------------------------------------------
 
@@ -99,6 +103,18 @@ CREATE TABLE `blogs_tags` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `blogs_tags`
+--
+
+INSERT INTO `blogs_tags` (`blogs_tags_id`, `blog_id`, `tags_id`, `created_at`, `updated_at`) VALUES
+(1, 45, 8, NULL, NULL),
+(2, 45, 9, NULL, NULL),
+(3, 45, 10, NULL, NULL),
+(4, 45, 11, NULL, NULL),
+(5, 45, 12, NULL, NULL),
+(6, 47, 13, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -177,7 +193,13 @@ INSERT INTO `tags` (`tags_id`, `tag_name`, `created_at`, `updated_at`) VALUES
 (4, 'Philosophy', '2017-07-26 23:54:56', '2017-07-26 23:54:56'),
 (5, 'Startup', '2017-07-27 00:00:14', '2017-07-27 00:00:14'),
 (6, 'Internet', '2017-07-27 00:22:55', '2017-07-27 00:22:55'),
-(7, 'asdasdasd', '2017-07-27 00:30:37', '2017-07-27 00:30:37');
+(7, 'asdasdasd', '2017-07-27 00:30:37', '2017-07-27 00:30:37'),
+(8, 'asd', '2017-07-27 19:14:58', '2017-07-27 19:14:58'),
+(9, 'dasd', '2017-07-27 19:14:58', '2017-07-27 19:14:58'),
+(10, 'das', '2017-07-27 19:14:58', '2017-07-27 19:14:58'),
+(11, '', '2017-07-27 19:14:58', '2017-07-27 19:14:58'),
+(12, 'dsad', '2017-07-27 19:14:58', '2017-07-27 19:14:58'),
+(13, 'asdasdsd asdasdasd', '2017-07-28 00:08:31', '2017-07-28 00:08:31');
 
 -- --------------------------------------------------------
 
@@ -296,12 +318,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `blog_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `blog_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT for table `blogs_tags`
 --
 ALTER TABLE `blogs_tags`
-  MODIFY `blogs_tags_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `blogs_tags_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `comments`
 --
@@ -316,7 +338,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `tags_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `tags_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `users`
 --

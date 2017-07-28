@@ -37,27 +37,29 @@ class ArticlesController extends Controller
     function addArticle(Request $request){
 
         $new_article = new Articles();
-        // $blog_id = 48;
-        // $tag_id = 11;
-        // dd($id);
-       
+
         $new_article->user_id=97;
         $new_article->title=$request->write_title;
         $new_article->caption=$request->write_caption;
         $new_article->banner_image=$request->write_banner_image;
         $new_article->content=$request->write_content;
-         
-        /* -- new tag -- */
-        $new_tag->tag_name=$request->write_tags;
-        $new_tag->save();
         $new_article->save();
 
-        $new_blogtags = new BlogsTags();
-        $new_blogtags->tags()->attach($blog_id,$tag_id);
-        $new_blogtags->save();
+        // ** ----  Insert Tags  --------- ** //
+        $tags_array =  explode(', ', $request->write_tags);
+        foreach ($tags_array as $tag) {
+            if (Tags::where("tag_name", $tag)->count()){
+                $new_tag = Tags::where("tag_name", $tag)->first();
+            } else {
+                $new_tag = new Tags();
+                $new_tag->tag_name = $tag;
+                $new_tag->save();
+            }
 
+            $new_article->addTag($new_tag->id);
+        }         
+               
         return back();
-
     }
 
     

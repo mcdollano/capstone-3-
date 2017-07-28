@@ -112,7 +112,100 @@ th {
 }
 
 #write_content {
-	width: 700px;
+	width: 600px;
 	height: 500px;
 	/*text-align: left;*/
+}
+
+/* ------------- NAV BAR ----------------------*/
+
+#login_modal_header {
+	text-align: center;
+}
+
+#login_modal_header img {
+	width: 250px;
+}
+
+.nav_container {
+	width: 100%;
+	border-radius: 0;
+	background-color: #9eb11e;
+	/*color: white;*/
+}
+
+.nav_container li {
+	color: black;
+}
+
+.logo_container {
+	margin-left: 40%;
+	margin-bottom: 10px;
+}
+
+.logo_container img {
+	width: 280px;
+	height: 200px;
+	/*margin: auto;*/
+}
+
+#myNavbar {
+	padding-left: 20%;
+	padding-right: 10%;
+}
+
+.navbar-right li {
+	margin-right: 10px;
+}
+
+#login_username, #login_password, #login_button {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#login_button {
+	margin-bottom: 20px;
+	background-color: #9eb11e;
+	border: 1px solid #9eb11e;
+}
+
+#register_button {
+	background-color: #9eb11e;
+	border: 1px solid #9eb11e;
+}
+
+.login_container > label {
+	margin-left: 10%;
+}
+
+.login_modal_content {
+	width: 80%;
+}
+
+#login_modal_footer {
+	text-align: center;
+}
+
+#login_modal_title {
+	text-align: center;
+}
+
+#login_modal_body p {
+	margin-left: 10%;
+	width: 80%;
+	text-align: center;
+}
+ 
+.login_modal_dialog {
+	margin: auto;
+}
+
+#cancel_register_button {
+	width: 79px;
+	height: 36px;
+	color: black;
+}
+
+.register_container2 {
+	background-color: white;
 }

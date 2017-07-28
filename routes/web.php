@@ -27,3 +27,10 @@ Route::get('/writeArticle',function() {
 
 Route::post('/saveArticle', 'ArticlesController@addArticle');
 
+Route::get('/blog', function() {
+    return view('home_template');
+});
+
+Route::get('/register', function() {
+	return view('register');
+});

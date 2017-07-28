@@ -26,13 +26,12 @@
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        @include("admin")
+        @include("navbar")
         
 </head>
 <body>
-    @yield("articles")
-    @yield("write_article")
-    <!-- dfcsfdf -->
+   @yield("register_content")
+    
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='{{ asset ("js/bootstrap.min.js")}}'></script>
