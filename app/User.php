@@ -27,4 +27,18 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    //   public function authenticate(Request $request)
+    //  {
+    //            $email=$request->get('email');
+    //            if (Auth::attempt(['email' => $email))
+    //             {     
+    //                 return redirect()->intended('/');   
+    //             }
+    //             else 
+    //             {
+    //                 return redirect('/login');
+    //             }
+
+    // }
+    
 }

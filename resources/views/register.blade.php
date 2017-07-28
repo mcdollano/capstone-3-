@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="col-sm-4 col-md-4 col-lg-4 register_container2">
 					<div class="register_box">
-						<form method="POST" action="">
+						<form method="POST" action='{{url("/registerUser")}}'>
 							{{ csrf_field() }}
 							<div class="form-group">
 								<label for="firstname">

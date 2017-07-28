@@ -34,3 +34,5 @@ Route::get('/blog', function() {
 Route::get('/register', function() {
 	return view('register');
 });
+
+Route::post('/registerUser', 'RegisterController@registerUser');

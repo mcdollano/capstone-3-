@@ -27,12 +27,11 @@
 			<tr>
 				<td class="article_id">{{ $blog->blog_id }}</td>
 				<td>{{ $blog->title }}</td>
-				<!-- <td>{{ $blog->caption }}</td> -->
 				<td><img src='{{ asset($blog->banner_image) }}' class="banner_image"></td>
-				<!-- <td>{{ $blog->content }}</td> -->
 				<td>{{ $blog->publish_date }}</td>
 				<td>{{ $blog->article_views }}</td>
-				<td>{{ $blog->user->first_name }}{{ $blog->user->last_name }}</td>
+				<td>{{ $blog->first_name }}{{ $blog->last_name }}</td>
+
 				<td>
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#quick_view{{$blog->blog_id}}">
 						Edit

@@ -13,6 +13,8 @@ class ArticlesController extends Controller
     function showArticles(){
     	$blogs = Articles::all();
     	$tags = Tags::all();
+        
+        // dd($blogs);
     	$comments = Comments::all();
 
     	return view('articles', compact('blogs','tags','comments'));
