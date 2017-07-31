@@ -29,8 +29,11 @@
         @include("navbar")
         
 </head>
-<body>
+<body class="home_template_body">
    @yield("register_content")
+   @yield("display_articles")
+   
+   
     
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

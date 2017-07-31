@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2017 at 02:55 AM
+-- Generation Time: Jul 31, 2017 at 10:54 AM
 -- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- PHP Version: 7.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -45,7 +45,7 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `category`, `title`, `caption`, `banner_image`, `content`, `publish_date`, `article_views`, `created_at`, `updated_at`, `user_id`) VALUES
-(1, NULL, 'kjkghjgfjgh', 'White Rabbit blew three gardeners, but.', 'http://lorempixel.com/640/360/?62974', 'He looked all the Duchess. \'Everything\'s got no arches are they repeated angrily, \'or I\'ll never tasted eggs, as you\'re growing near the name.', '1991-04-07 01:06:40', 164, NULL, '2017-07-29 04:02:20', '1'),
+(1, NULL, 'kjkghjgfjgh', '<p>qqqqqqqqq</p>', 'http://lorempixel.com/640/360/?62974', 'He looked all the Duchess. \'Everything\'s got no arches are they repeated angrily, \'or I\'ll never tasted eggs, as you\'re growing near the name.', '1991-04-07 01:06:40', 164, NULL, '2017-07-30 18:23:21', '1'),
 (2, NULL, 'I hadn\'t begun to.', 'King. (The unfortunate guests had.', 'http://lorempixel.com/640/360/?91750', 'However, she went on a great puzzle!\' And argued each side and there was sitting on growing, and all move one of the court was a Gryphon sat silent.', '2007-08-14 16:23:34', 116, NULL, NULL, '2'),
 (3, NULL, 'I\'LL soon as to.', 'King, \'that it\'s an extraordinary ways.', 'http://lorempixel.com/640/360/?54395', 'The King and making quite a fact.\' Alice remarked. \'There goes Bill!\' then all round, she went on in Coils.\' \'What IS his hand in head.', '2002-11-09 19:24:14', 146, NULL, NULL, '1'),
 (4, NULL, 'Hatter: and listen.', 'I give it into Alice\'s, and after all!.', 'http://lorempixel.com/640/360/?71577', 'At this moment, when they got no one hand upon her hands at the other side to think that there was full of beautiful Soup!\' CHAPTER VIII. The.', '1972-09-03 09:37:35', 138, NULL, NULL, '2'),
@@ -74,7 +74,9 @@ INSERT INTO `articles` (`id`, `category`, `title`, `caption`, `banner_image`, `c
 (27, NULL, 'DON\'T know,\' said.', 'Said the other side of broken glass..', 'http://lorempixel.com/640/360/?71321', 'Alice, whose cause of crawling away: besides all sorts of them, they were the executioner, the officers: but she had been a line along in the tea--\'.', '1971-05-06 20:26:41', 162, NULL, NULL, '1'),
 (28, NULL, 'Canterbury, found.', 'Alice, a series of sight: \'but those.', 'http://lorempixel.com/640/360/?32402', 'I could get what I should have come, or twice she would go down--Here, Bill! catch a furious passion, and the Caterpillar. \'Not I!\' he said that.', '1983-12-03 13:51:15', 151, NULL, NULL, '2'),
 (29, NULL, 'Once more nor did.', 'Alice did not join the Footman seemed.', 'http://lorempixel.com/640/360/?11963', 'I\'m Mabel, I\'ll just in a song, \'I\'d nearly everything upon them something better leave the Footman, \'and most interesting, and was that?\' said the.', '2005-04-12 03:27:17', 86, NULL, NULL, '3'),
-(30, NULL, 'The great delight.', 'And certainly too far off the real.', 'http://lorempixel.com/640/360/?35456', 'King. \'It must make out of this. I suppose you\'ll be a bad cold if she found it was,\' said the little glass box of long as if I don\'t remember them,.', '2016-01-06 10:52:19', 194, NULL, NULL, '2');
+(31, NULL, 'article try', 'article try', 'Untitled.png', 'article tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle try', NULL, NULL, '2017-07-30 23:06:39', '2017-07-30 23:06:39', '97'),
+(32, NULL, 'article try', 'article try', 'Untitled.png', 'article tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle tryarticle try', NULL, NULL, '2017-07-30 23:08:10', '2017-07-30 23:08:10', '97'),
+(33, NULL, 'sadasdasd', 'asdasdasd', 'Untitled.png', '<p>asdasdasdasd</p>', NULL, NULL, '2017-07-31 00:12:52', '2017-07-31 00:12:52', '97');
 
 -- --------------------------------------------------------
 
@@ -229,7 +231,11 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `mobile_number`, 
 (42, 'xxxxxxxxxx', 'xxxxxxxxxxxxx', 'xxxxxxxxx@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'xxxxxxxxxxxx', '$2y$10$wuWNBsmt3lUOmsCM0e3tgeedCkMMm1oOcXvJZdvKCK.ZRuUwNsrWC', NULL, NULL, '2017-07-29 05:55:18', '2017-07-29 05:55:18'),
 (43, 'pids', 'dollano', 'pids@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'pids', '$2y$10$M76jChcAbgdLcJBkjFneb.AwRpDuLuDneM0tL1rHkA2lCUDEQOauy', NULL, NULL, '2017-07-29 06:11:11', '2017-07-29 06:11:11'),
 (44, 'pidoy', 'pidoy', 'pidoy@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'pidoy', '$2y$10$4SOnE5T76EYpPUw5bC/AIOVEGrCa7R1AXVcTyEzW3C5QOZK73JGRW', NULL, NULL, '2017-07-29 06:34:33', '2017-07-29 06:34:33'),
-(45, 'doypi', 'doypi', 'doypi@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'doypi', '$2y$10$bP.8B6ocKPsEDwtpwJPpyeQmOmNuYW/YAofiV5qOG7s9HAjsnsTLG', NULL, NULL, '2017-07-29 06:39:51', '2017-07-29 06:39:51');
+(45, 'doypi', 'doypi', 'doypi@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'doypi', '$2y$10$bP.8B6ocKPsEDwtpwJPpyeQmOmNuYW/YAofiV5qOG7s9HAjsnsTLG', NULL, NULL, '2017-07-29 06:39:51', '2017-07-29 06:39:51'),
+(46, 'kokoko', 'kokoko', 'kokoko@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'kokoko', '$2y$10$LmJ9mi61m3bpqZr.JOdWT.QtPlGNr89/Uy.xnbhOYzU3pUTXYt9be', NULL, NULL, '2017-07-30 17:45:04', '2017-07-30 17:45:04'),
+(47, 'pipipi', 'pipipi', 'pipipi@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'pipipi', '$2y$10$XRF3hIoOQyJ3cr9JWXo3eu5ut2AYWzC4/KmN6X8f75DbNQgKECH7i', NULL, NULL, '2017-07-30 19:00:58', '2017-07-30 19:00:58'),
+(48, 'qqq', 'qqq', 'qqq@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'qqq', '$2y$10$pGgbpfSh01Omek1jXxUZZelYAhMLC/zJs5sNrvewakNo3bCIsVZgK', NULL, NULL, '2017-07-31 00:06:57', '2017-07-31 00:06:57'),
+(49, 'mmm', 'mmm', 'mmm@email.com', NULL, NULL, 'male', NULL, NULL, NULL, 'mmm', '$2y$10$8NHj6gwLp7gzk4SzPq2SBebPcWX0WBiWyBZF11okPZHVSfmMS2TEi', NULL, NULL, '2017-07-31 00:09:01', '2017-07-31 00:09:01');
 
 --
 -- Indexes for dumped tables
@@ -288,7 +294,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `blogs_tags`
 --
@@ -313,7 +319,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

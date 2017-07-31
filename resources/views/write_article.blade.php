@@ -20,7 +20,7 @@
 		         	<textarea name="write_content" class="form-control" id="write_content"></textarea>
 		         </div>	
 		         <div class="form-group">
-		         	<label for="caption">Add Tags :</label>
+		         	<label for="caption">Add Tags : (tags can be separated by ',' or 'space')</label>
 		         	<input type="text" class="form-control" name="write_tags" id="write_tags">
 		         </div>
 		         <input type="submit" class="btn btn-success" name="post_article" id="post_article_btn" value="Post Article">

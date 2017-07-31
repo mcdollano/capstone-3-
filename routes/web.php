@@ -31,17 +31,18 @@ Route::get('/writeArticle',function() {
 
 Route::post('/saveArticle', 'ArticlesController@addArticle');
 
-Route::get('/blog', function() {
-    return view('home_template');
-});
-
-// Route::get('/register', function() {
-// 	return view('register');
-// });
-
 Route::get('/register', 'RegisterController@create');
 Route::post('/registerUser', 'RegisterController@registerUser');
 
 Route::get('/checkuser', 'RegisterController@store');
 
 Route::post('/login', 'LogInController@store');
+
+// LOG OUT //
+
+Route::get('/logout', 'LogInController@destroy');
+
+// DISPLAY ARTICLES //
+
+Route::get('/blog', 'ArticlesController@showArticles2');
+

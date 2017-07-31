@@ -59,7 +59,7 @@ class RegisterController extends Controller
 
             ]);
 
-            auth()->login($user);
+            // auth()->login($user);
             return view('home_template');
     } 
 

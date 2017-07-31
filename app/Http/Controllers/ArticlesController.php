@@ -12,20 +12,28 @@ class ArticlesController extends Controller
 {
     function showArticles(){
     	$blogs = Articles::all();
-        // dd($blogs);
     	$tags = Tags::all();
         
-        // dd($blogs);
     	$comments = Comments::all();
 
     	return view('articles', compact('blogs','tags','comments'));
     }
 
+    function showArticles2(){
+        $blogs = Articles::take(5)->get();
+        $tags = Tags::all();
+        
+        $comments = Comments::all();
+
+        return view('display_articles', compact('blogs','tags','comments'));
+    }
+
     function editArticle(Request $request, $blog_id){
     	$article = Articles::find($blog_id);
-    	$request->file('edit_banner_image')->move("storage/", 'try');
+    	// $request->file('edit_banner_image')->move("storage/", 'try');
     	$article->title = $request->input('edit_title');
-  		$article->save();
+  		$article->caption =$request->input('edit_content');
+        $article->save();
 
        	return back();
     }
@@ -37,9 +45,10 @@ class ArticlesController extends Controller
     	return back();
     }
  
-    function addArticle(Request $request){
+    function addArticle(Request $request) {
 
         $new_article = new Articles();
+        $new_tag = new Tags();
 
         $new_article->user_id=97;
         $new_article->title=$request->write_title;

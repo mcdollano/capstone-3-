@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use Session;
 
 class LogInController extends Controller
 {
@@ -34,24 +35,23 @@ class LogInController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {   
-        $username = $request->login_username;
-        $password = $request->login_password;
+        // $username = $request->login_username;
+        // $password = $request->login_password;
 
-        if (User::where("user_name", $username)) {
+        // if (User::where("user_name" == $username) && ("user_password" == $password)) {
             
-            // auth()->login($user);
-            return view('register');
+        //     auth()->login($user);
+        //     return view('admin');
+        // }
+    
+        if(!auth()->attempt(request(['user_name','user_password']))) {
+            return back();
         }
-
-    }
-
-       //  if(! auth()->attempt(request(['user_name','user_password']))) {
-       //      return back();
-       //  }
-       // return view('register');
+       return view('display_articles');
    
+   }
 
     /**
      * Display the specified resource.
@@ -93,9 +93,10 @@ class LogInController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy()
+    {      
         auth()->logout();
-        return view('home_template');
+        return view('blog');
     }
+    
 }

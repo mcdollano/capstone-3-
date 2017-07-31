@@ -15,6 +15,12 @@
         
         <script>
             tinymce.init({
+            selector: '#edit_content'
+            });
+        </script>
+
+        <script>
+            tinymce.init({
             selector: '#write_content'
             });
         </script>
