@@ -397,12 +397,14 @@ th {
 }
 
 .latest_article_title_container {
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: bold;
+
 }
 
 .latest_article_container {
 	margin-bottom: 10px;
+	width: 100%;
 }
 
 .underline {
@@ -417,8 +419,26 @@ th {
 	padding-left: 20px;
 }
 
-.latest_article_caption_container, .latest_article_author_container  {
+.latest_article_caption_container {
+	font-style: italic;
+}
+
+.latest_article_caption_container {
+	padding-bottom: 10px;
+	max-width: 350px;
+}
+
+.latest_article_author_container {
 	padding-top: 10px;
+}
+
+.latest_article_content_container, {
+	max-width: 350px;
+}	
+
+.author_name {
+	color: #9eb11e;
+
 }
 
 

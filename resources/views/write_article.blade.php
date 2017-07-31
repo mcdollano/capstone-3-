@@ -1,7 +1,7 @@
 @extends ("template")
 	@section("write_article")
 		<div class="write_article_container">
-			<form method="POST" action='{{url("/saveArticle")}}'>
+			<form method="POST" action='{{url("/saveArticle")}}' enctype="multipart/form-data">
 			{{ csrf_field() }}
 				<div class="form-group">
 		         	<label for="title">Title :</label>

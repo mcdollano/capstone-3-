@@ -1,5 +1,6 @@
 @extends("home_template")
 	@section("display_articles")
+		
 		<div class="display_articles_container">
 			<div class="home_banner_image">
 				 <img src="{{ asset('images/banner_1.jpeg') }}">
@@ -27,25 +28,41 @@
 							<img src="{{ $blog->banner_image }}">	
 						</div>
 						<div class="latest_article_content_container col-sm-6 col-md-6 col-lg-6">
+
 							<div class="latest_article_tag_container">
 								{{ $blog->tags_id }}
 							</div>
+
 							<div class="latest_article_title_container">
 								{{ $blog->title }}
 							</div>
+
 							<div class="latest_article_caption_container">
-								{{ $blog->caption }}
+								{!! $blog->caption !!}
 							</div>
+
+							<div class="latest_article_content_container">
+								{!!str_limit($blog->content) !!}
+							</div>
+
 							<div class="latest_article_author_container">
-								by {{ $blog->user->first_name }}{{ $blog->user->last_name }}
+								by<span class="author_name">
+								 {{ $blog->user->first_name }}{{ $blog->user->last_name }}
+								 </span>
 							</div>
+
 							<div class="latest_article_createdat_container">
 								{{ $blog->publish_date }}{{ $blog->created_at }}
-							</div>			
+							</div>	
+
 						</div>
 						
 					</div>
 					<div class="underline"></div>
+
+					<!-- FB COMMENT PLUG IN -->
+					
+					<!-- <div class="fb-comments" data-href="http://localhost:8000/blog" data-width="500" data-numposts="5"></div> -->
 
 				@endforeach	
 
@@ -55,5 +72,6 @@
 				</div>
 			</div>
 		</div>
+		
 
 	@endsection

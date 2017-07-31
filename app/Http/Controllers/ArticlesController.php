@@ -20,7 +20,7 @@ class ArticlesController extends Controller
     }
 
     function showArticles2(){
-        $blogs = Articles::take(5)->get();
+        $blogs = Articles::orderBy('created_at', 'asc')->take(5)->get();
         $tags = Tags::all();
         
         $comments = Comments::all();
@@ -50,10 +50,18 @@ class ArticlesController extends Controller
         $new_article = new Articles();
         $new_tag = new Tags();
 
-        $new_article->user_id=97;
+        $new_article->user_id=1;
         $new_article->title=$request->write_title;
         $new_article->caption=$request->write_caption;
-        $new_article->banner_image=$request->write_banner_image;
+
+        // INSERT IMAGE TO DB 
+
+        $image = $request->write_banner_image;
+        $filename = $request->write_title . "." . $image->getClientOriginalExtension();
+
+        $image->move('uploads/banner_image/',$filename);
+        $new_article->banner_image = 'uploads/banner_image/' . $filename;
+
         $new_article->content=$request->write_content;
         $new_article->save();
 
