@@ -21,6 +21,10 @@ Route::post('/editArticle/{blog_id}', 'ArticlesController@editArticle');
 
 Route::post('/deleteArticle/{blog_id}','ArticlesController@deleteArticle');
 
+Route::get('/editArticle',function() {
+	return view('edit_article');
+});
+
 Route::get('/writeArticle',function() {
 	return view('write_article');
 });
@@ -31,8 +35,13 @@ Route::get('/blog', function() {
     return view('home_template');
 });
 
-Route::get('/register', function() {
-	return view('register');
-});
+// Route::get('/register', function() {
+// 	return view('register');
+// });
 
+Route::get('/register', 'RegisterController@create');
 Route::post('/registerUser', 'RegisterController@registerUser');
+
+Route::get('/checkuser', 'RegisterController@store');
+
+Route::post('/login', 'LogInController@store');

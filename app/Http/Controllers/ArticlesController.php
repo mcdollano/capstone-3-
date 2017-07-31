@@ -12,6 +12,7 @@ class ArticlesController extends Controller
 {
     function showArticles(){
     	$blogs = Articles::all();
+        // dd($blogs);
     	$tags = Tags::all();
         
         // dd($blogs);
@@ -49,13 +50,12 @@ class ArticlesController extends Controller
 
         // ** ----  Insert Tags  --------- ** //
         $tags_array =  explode(', ', $request->write_tags);
+        
         foreach ($tags_array as $tag) {
             if (Tags::where("tag_name", $tag)->count()){
                 $new_tag = Tags::where("tag_name", $tag)->first();
             } else {
-                $new_tag = new Tags();
-                $new_tag->tag_name = $tag;
-                $new_tag->save();
+                 
             }
 
             $new_article->addTag($new_tag->id);

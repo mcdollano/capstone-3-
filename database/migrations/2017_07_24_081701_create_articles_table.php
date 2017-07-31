@@ -14,7 +14,7 @@ class CreateArticlesTable extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->increments('blog_id');
+            $table->increments('id');
             $table->string('category')->nullable();
             $table->string('title')->nullable();
             $table->string('caption')->nullable();;
@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration
             $table->text('content')->nullable();
             $table->string('publish_date')->nullable();
             $table->integer('article_views')->nullable();
+
             $table->timestamps();
 
         });

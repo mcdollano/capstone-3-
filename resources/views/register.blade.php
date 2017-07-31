@@ -2,10 +2,10 @@
 	@section("register_content")
 		<div class="register_container">
 			<h4>Create your Growth Hack Philippines Account</h4>
-			<div class="row">
-				<div class="col-sm-4 col-md-4 col-lg-4 register_container2">
+			<!-- <div class="row"> -->
+				<div register_container2">
 					<div class="register_box">
-						<form method="POST" action='{{url("/registerUser")}}'>
+						<form method="POST" action="/registerUser">
 							{{ csrf_field() }}
 							<div class="form-group">
 								<label for="firstname">
@@ -13,7 +13,7 @@
 										First Name *
 									</span>
 								</label>				
-								<input type="text" class="form-control" name="register_firstname" id="register_firstname">
+								<input type="text" class="form-control" name="register_firstname" id="register_firstname" required>
 							</div>
 							<div class="form-group">
 								<label for="lastname">
@@ -21,7 +21,7 @@
 										Last Name *
 									</span>
 								</label>				
-								<input type="text" class="form-control" name="register_lastname" id="register_lasttname">
+								<input type="text" class="form-control" name="register_lastname" id="register_lasttname" required>
 							</div>
 							<div class="form-group">
 								<label for="email">
@@ -29,7 +29,7 @@
 										Email Address *
 									</span>
 								</label>				
-								<input type="email" class="form-control" name="register_email" id="register_email">
+								<input type="email" class="form-control" name="register_email" id="register_email" required>
 							</div>
 							<div class="form-group">
 								<label for="gender">
@@ -47,7 +47,7 @@
 										User Name *
 									</span>
 								</label>				
-								<input type="text" class="form-control" name="register_username" id="register_username">
+								<input type="text" class="form-control" name="register_username" id="register_username" required>
 							</div>
 							<div class="form-group">
 								<label for="password">
@@ -55,7 +55,7 @@
 										Password *
 									</span>
 								</label>				
-								<input type="text" class="form-control" name="register_password" id="register_password">
+								<input type="password" class="form-control" name="register_password" id="register_password" required>
 							</div>
 							<div class="form-group">
 								<label for="confrim_password">
@@ -63,17 +63,19 @@
 										Confirm Password *
 									</span>
 								</label>				
-								<input type="text" class="form-control" name="register_confrim_password" id="register_confrim_password">
+								<input type="password" class="form-control" name="register_password_confirmation" id="register_confirm_password" required>
 							</div>
-							<div>
-							<input type="submit" name="register_button" value="Register" class="btn btn-success" id="register_button">
+							<div class="register_button_container">
+								<input type="submit" name="register_button" value="Register" class="btn btn-success" id="register_button">
+							</div>	
 						</form>		
-							
-								<button name="cancel_button" value="Cancel" class="btn btn-default" id="cancel_register_button"><a href="/blog">Cancel</a>
+							<a href="/blog">
+								<button name="cancel_button" value="Cancel" class="btn btn-default" id="cancel_register_button">Cancel
 								</button>
+							</a>	
 						
 					</div>
 				</div>
-			</div>			
+			<!-- </div>			 -->
 		</div>
 	@endsection

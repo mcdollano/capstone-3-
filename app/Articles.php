@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Articles extends Model
 {
-	public $primaryKey = 'blog_id';
+	public $primaryKey = 'id';
     function user(){
-    	return $this->belongsTo('App\User','user_id','user_id');
+    	return $this->belongsTo('App\User','user_id','id');
     }
 
     function tags(){

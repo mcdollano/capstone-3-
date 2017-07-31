@@ -24,7 +24,7 @@
 
         <link rel="stylesheet" href='{{asset("font-awesome/css/font-awesome.min.css")}}'>
 
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600|Roboto+Condensed" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @include("navbar")
         

@@ -1,7 +1,7 @@
 		<div class="side_menu_container">
 			<div class="pic_name_container">
 				<div class="profile_pic_container">
-					<img src="https://pixabay.com/en/blank-profile-picture-mystery-man-973460/">
+					 <img src="{{ asset('images/prof_pic.jpg') }}">
 				</div>
 				<div class="sidemenu_name_container"> 
 					<span>Mark Dollano</span><br>
