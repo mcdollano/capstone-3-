@@ -27,13 +27,10 @@ class CreateUsersTable extends Migration
             $table->string('user_name')->unique();
             $table->string('user_password')->unique();
             $table->string('user_role')->nullable();
-            $table->string('token')->nullable();
+            $table->string('remember_token')->nullable();
             $table->timestamps();
-
-
         });
     }
-
 
     /**
      * Reverse the migrations.

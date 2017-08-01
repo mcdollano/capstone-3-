@@ -28,7 +28,9 @@
 							<img src="{{ $blog->banner_image }}">	
 						</div>
 						<div class="latest_article_content_container col-sm-6 col-md-6 col-lg-6">
-
+							<div class="latest_article_category_container">
+								{{ $blog->category }}
+							</div>
 							<div class="latest_article_tag_container">
 								{{ $blog->tags_id }}
 							</div>
@@ -54,7 +56,6 @@
 							<div class="latest_article_createdat_container">
 								{{ $blog->publish_date }}{{ $blog->created_at }}
 							</div>	
-
 						</div>
 						
 					</div>
@@ -67,7 +68,39 @@
 				@endforeach	
 
 				</div>
-				<div class="col-sm-4 col-md-4 col-lg-4">
+
+				<!--MOST READ ARTICLES -->
+
+				<div class="col-sm-4 col-md-4 col-lg-4 mostread_">
+					<h3>Most Read Articles</h3>
+					<div class="underline"></div>
+					@foreach($mostreads as $mostread)
+					<div class="mostread_article_container row">
+						<div class="latest_article_image_container col-sm-6 col-md-6 col-lg-6">
+							<img src="{{ $mostread->banner_image }}">	
+						</div>
+						<div class="mostread_article_content_container col-sm-6 col-md-6 col-lg-6">
+
+							<div class="mostread_article_tag_container">
+								{{ $mostread->tags_id }}
+							</div>
+
+							<div class="mostread_article_title_container">
+								{{ $mostread->title }}
+							</div>
+
+							<div class="mostread_article_createdat_container">
+								{{ $mostread->publish_date }}{{ $mostread->created_at }}
+							</div>	
+							<div class="mostread_article_category_container">
+								{{ $mostread->category }}
+							</div>
+						</div>
+						
+					</div>
+					<div class="mostread_underline"></div>
+
+				@endforeach	
 					
 				</div>
 			</div>

@@ -12,6 +12,10 @@
 		         	<input type="text" class="form-control" name="write_caption" id="write_caption" required>
 		         </div>
 		         <div class="form-group">
+		         	<label for="category">Category :</label>
+		         	<input type="text" class="form-control" name="write_category" id="write_category" required>
+		         </div>
+		         <div class="form-group">
 		         	<label for="banner_image">Banner Image :</label>
 		         	<input type="file" name="write_banner_image" required>
 		         </div>		

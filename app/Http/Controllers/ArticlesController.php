@@ -21,11 +21,12 @@ class ArticlesController extends Controller
 
     function showArticles2(){
         $blogs = Articles::orderBy('created_at', 'asc')->take(5)->get();
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
         $tags = Tags::all();
         
         $comments = Comments::all();
 
-        return view('display_articles', compact('blogs','tags','comments'));
+        return view('display_articles', compact('blogs','tags','comments', 'mostreads'));
     }
 
     function editArticle(Request $request, $blog_id){
@@ -53,6 +54,7 @@ class ArticlesController extends Controller
         $new_article->user_id=1;
         $new_article->title=$request->write_title;
         $new_article->caption=$request->write_caption;
+        $new_article->category=$request->write_category;
 
         // INSERT IMAGE TO DB 
 
@@ -71,11 +73,15 @@ class ArticlesController extends Controller
         foreach ($tags_array as $tag) {
             if (Tags::where("tag_name", $tag)->count()){
                 $new_tag = Tags::where("tag_name", $tag)->first();
-            } else {
-                 
-            }
 
-            $new_article->addTag($new_tag->id);
+            } else {
+                $new_tag = new Tags();
+                 $new_tag->tag_name = $tag;
+                $new_tag->save();
+            }
+                // dd($new_tag);
+             $new_article->addTag($new_tag->id); 
+
         }         
                
         return back();

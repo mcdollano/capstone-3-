@@ -45,4 +45,3 @@ Route::get('/logout', 'LogInController@destroy');
 // DISPLAY ARTICLES //
 
 Route::get('/blog', 'ArticlesController@showArticles2');
-

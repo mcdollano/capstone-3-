@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use Auth;
 use Session;
+use App\Articles;
+use App\Tags;
 
 class LogInController extends Controller
 {
@@ -35,23 +37,26 @@ class LogInController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
-    {   
-        // $username = $request->login_username;
-        // $password = $request->login_password;
+    public function store(Request $request)
+    {
+        // Store data from $request to these variables
+        $user_name = $request->login_username;
+        $user_password = $request->login_password;
 
-        // if (User::where("user_name" == $username) && ("user_password" == $password)) {
-            
-        //     auth()->login($user);
-        //     return view('admin');
-        // }
-    
-        if(!auth()->attempt(request(['user_name','user_password']))) {
-            return back();
+        // User validation
+        if (Auth::attempt(['user_name' => request($user_name),'user_password' => bcrypt(request($user_password))], true)) {
+            return back()->withErrors([
+                'message' => 'Please check your credentials and try again.'
+            ]);
         }
-       return view('display_articles');
-   
-   }
+
+        // Searches the user records
+        $current_user = User::where('user_name', $user_name)->first();
+
+        // LogIn Session
+        auth()->login($current_user, true);
+        return redirect('/blog');
+    }
 
     /**
      * Display the specified resource.
@@ -93,10 +98,13 @@ class LogInController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    /* LOG OUT */
+
     public function destroy()
     {      
         auth()->logout();
-        return view('blog');
+        return redirect('/blog');
     }
     
 }

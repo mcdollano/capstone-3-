@@ -27,22 +27,23 @@
             <li class="leadership"><a href="#">LEADERSHIP</a></li>
           </ul>
 
-           @if(Auth::check()) 
+           @if (Auth::check())
             <ul class="nav navbar-nav navbar-right">
-                <li> Logged in as : </li>
-               <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                         {{ Auth::user()->first_name }}
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                <li class="dropdown">
 
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                         Hi, {{ Auth::user()->first_name }}
+                        <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu">
                             <li><a href='/logout'>Log Out</a></li>
                             <li><a href="#">Edit Profile</a></li>
+                        </ul>
                 </li>
-               <!-- <input type="" name=""> -->
-
-            </ul>   
+            </ul>
+    
            @else
+
             <ul class="nav navbar-nav navbar-right">
                 <li>
                 	<a href="#" data-toggle="modal" data-target="#login_modal">
@@ -93,17 +94,16 @@
                 		</div>
                 	</div>
                 </li>  
-            <li>
-            	<a href="/register">
-            		<span class="glyphicon glyphicon-user"></span> Sign Up
-            	</a>
-            </li> 
-          </ul>
-
+                <li>
+                	<a href="/register">
+                		<span class="glyphicon glyphicon-user"></span> Sign Up
+                	</a>
+                </li> 
+            </ul>
         
         @endif
 
-      <!--   <form class="navbar-form search_container" role="search">
+        <form class="navbar-form search_container" role="search">
             <div class="input-group add-on search_container">
                 <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
                     <div class="input-group-btn">
@@ -112,7 +112,8 @@
                         </button>
                     </div>
             </div>
-        </form> -->
+        </form>
+
         </div>
       </div>
     </nav>

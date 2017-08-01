@@ -59,7 +59,6 @@ class RegisterController extends Controller
 
             ]);
 
-            // auth()->login($user);
             return view('home_template');
     } 
 
@@ -109,6 +108,8 @@ class RegisterController extends Controller
         //
     }
 
+    // REGISTER USER //
+
     public function registerUser(Request $request){
 
         $new_user = new User();
@@ -121,9 +122,9 @@ class RegisterController extends Controller
 
         $new_user->save();
        
-        auth()->login($new_user);
+        // auth()->login($new_user);
 
-        return view('home_template');
+        return redirect('/blog');
 
     }
 
