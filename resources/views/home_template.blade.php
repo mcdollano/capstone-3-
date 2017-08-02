@@ -31,7 +31,20 @@
 </head>
 <body class="home_template_body">
 
+<!--FACEBOOK COMMENT-->
+
     <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=152673230403";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--FACEBOOK LIKE AND SHARE-->
+
+<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -42,9 +55,8 @@
 
    @yield("register_content")
    @yield("display_articles")
+   @yield("view_article")
    
-   
-    
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='{{ asset ("js/bootstrap.min.js")}}'></script>

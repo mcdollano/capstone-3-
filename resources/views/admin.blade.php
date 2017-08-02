@@ -10,15 +10,19 @@
 			</div>	
 
 			<div class="admin_panel_container">
-				<div class="dashboard_container icon_container">
-					<i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;<span>Dashboard</span>		
-				</div>
+				<a href='{{url("/dashboard")}}'>
+					<div class="dashboard_container icon_container">
+						<i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;<span>Dashboard</span>		
+					</div>
+				</a>	
+
 				<a href='{{url("/articles")}}'>
 					<div class="articles_container icon_container">
 						<i class="fa fa-newspaper-o" aria-hidden="true"></i>
 							&nbsp;<span>Articles</span>
 					</div>
 				</a>
+				
 				<div class="members_container icon_container">
 					<i class="fa fa-address-book-o" aria-hidden="true"></i>
 						&nbsp;<span>Members</span>

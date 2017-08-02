@@ -458,6 +458,7 @@ th {
 .mostread_article_container {
 	font-size: 10px;
 	padding-right: 25px;
+	margin-bottom: 5px;
 }
 
 .mostread_author_name {
@@ -477,4 +478,85 @@ th {
 .mostread_article_category_container {
 	color: #9eb11e;
 	text-transform: uppercase; 
+}
+
+/* -------- VIEW ARTICLES ---------- */
+
+.view_bannerimage_container img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.view_article_title_container {
+	font-size: 40px;
+	color: black;
+	text-transform: bold;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	line-height: 95%;
+}
+
+.view_content_container {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+
+.view_bannerimage_container {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 5%;
+}
+
+.view_article_heading_container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.view_article_category_container {
+	padding-top: 4%;
+	line-height: 0px;
+	color: #9eb11e;
+}
+
+.view_author_name {
+	color: #9eb11e;
+}
+
+.view_article_publishdate_container {
+	padding-bottom: 10px;
+}
+
+.view_underline {
+	padding-left: 40px;
+	background-color: rgb(238, 238, 238);
+	height: 1px;
+	width: 98%;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.view_articles_tags {
+	padding-left: 10px;
+}
+
+.view_underline_tags {
+	background-color: rgb(238, 238, 238);
+	height: 1px;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.fb-share-button {
+	margin-bottom: 10px;
+}
+
+.fb-share-button2 {
+	padding-left: 10px;
+	/*margin-top: 10px;*/
+}
+
+.fb-like.fb_iframe_widget span{
+  vertical-align: top !important;
+  padding-top: 2px !important;
 }

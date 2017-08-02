@@ -10,6 +10,8 @@ use DB;
 
 class ArticlesController extends Controller
 {
+    // ADMIN DISPLAY ARTICLES 
+
     function showArticles(){
     	$blogs = Articles::all();
     	$tags = Tags::all();
@@ -19,6 +21,8 @@ class ArticlesController extends Controller
     	return view('articles', compact('blogs','tags','comments'));
     }
 
+    // HOME DISPLAY ARTICLES 
+
     function showArticles2(){
         $blogs = Articles::orderBy('created_at', 'asc')->take(5)->get();
         $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
@@ -27,6 +31,17 @@ class ArticlesController extends Controller
         $comments = Comments::all();
 
         return view('display_articles', compact('blogs','tags','comments', 'mostreads'));
+    }
+
+    // VIEW ARTICLE PAGE
+
+   function viewArticles($id){
+        $blogs = Articles::find($id);
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(10)->where('id','!=',$id)->get();
+        $tags = Tags::find($id);
+        $comments = Comments::all();
+
+        return view('view_article', compact('blogs','tags','comments','mostreads'));
     }
 
     function editArticle(Request $request, $blog_id){
@@ -76,15 +91,23 @@ class ArticlesController extends Controller
 
             } else {
                 $new_tag = new Tags();
-                 $new_tag->tag_name = $tag;
+                $new_tag->tag_name = $tag;
                 $new_tag->save();
             }
-                // dd($new_tag);
+
              $new_article->addTag($new_tag->id); 
 
         }         
                
         return back();
+    }
+
+    function show_dashboard() {
+        $blogs = Articles::all();
+        $tags = Tags::all();
+        $comments = Comments::all();
+
+        return view('articles', compact('blogs','tags','comments'));
     }
 
     

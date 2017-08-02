@@ -23,10 +23,13 @@
 					<h3>Latest Articles</h3>
 					<div class="underline"></div>
 				@foreach($blogs as $blog)
+
 					<div class="latest_article_container row">
-						<div class="latest_article_image_container col-sm-6 col-md-6 col-lg-6">
-							<img src="{{ $blog->banner_image }}">	
-						</div>
+						<a href='{{url("/viewarticle/$blog->id")}}'>
+							<div class="latest_article_image_container col-sm-6 col-md-6 col-lg-6">
+								<img src="{{ $blog->banner_image }}">	
+							</div>
+						</a>
 						<div class="latest_article_content_container col-sm-6 col-md-6 col-lg-6">
 							<div class="latest_article_category_container">
 								{{ $blog->category }}
