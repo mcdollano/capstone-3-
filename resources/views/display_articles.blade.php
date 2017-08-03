@@ -37,11 +37,11 @@
 							<div class="latest_article_tag_container">
 								{{ $blog->tags_id }}
 							</div>
-
+						<a href='{{url("/viewarticle/$blog->id")}}'>
 							<div class="latest_article_title_container">
 								{{ $blog->title }}
 							</div>
-
+						</a>
 							<div class="latest_article_caption_container">
 								{!! $blog->caption !!}
 							</div>
@@ -64,10 +64,6 @@
 					</div>
 					<div class="underline"></div>
 
-					<!-- FB COMMENT PLUG IN -->
-					
-					<!-- <div class="fb-comments" data-href="http://localhost:8000/blog" data-width="500" data-numposts="5"></div> -->
-
 				@endforeach	
 
 				</div>
@@ -79,19 +75,21 @@
 					<div class="underline"></div>
 					@foreach($mostreads as $mostread)
 					<div class="mostread_article_container row">
+					<a href='{{url("/viewarticle/$blog->id")}}'>
 						<div class="latest_article_image_container col-sm-6 col-md-6 col-lg-6">
 							<img src="{{ $mostread->banner_image }}">	
 						</div>
+					</a>	
 						<div class="mostread_article_content_container col-sm-6 col-md-6 col-lg-6">
 
 							<div class="mostread_article_tag_container">
 								{{ $mostread->tags_id }}
 							</div>
-
+					<a href='{{url("/viewarticle/$blog->id")}}'>
 							<div class="mostread_article_title_container">
 								{{ $mostread->title }}
 							</div>
-
+					</a>
 							<div class="mostread_article_createdat_container">
 								{{ $mostread->publish_date }}{{ $mostread->created_at }}
 							</div>	

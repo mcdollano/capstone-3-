@@ -7,6 +7,7 @@ use App\Articles;
 use App\Tags;
 use App\Comments;
 use DB;
+use App\User;
 
 class ArticlesController extends Controller
 {
@@ -104,11 +105,15 @@ class ArticlesController extends Controller
 
     function show_dashboard() {
         $blogs = Articles::all();
+        $total_posts = DB::table('articles')->count('id');
+        $total_users = DB::table('users')->count('id');
         $tags = Tags::all();
         $comments = Comments::all();
 
-        return view('articles', compact('blogs','tags','comments'));
+        return view('dashboard', compact('blogs','tags','comments', 'total_posts', 'total_users'));
     }
 
-    
+
+
+  
 }

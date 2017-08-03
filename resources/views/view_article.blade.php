@@ -87,14 +87,13 @@
 										<div class="mostread_article_title_container">
 											{{ $mostread->title }}
 										</div>
-
+									</a>
 										<div class="mostread_article_createdat_container">
 											{{ $mostread->publish_date }}{{ $mostread->created_at }}
 										</div>	
 										<div class="mostread_article_category_container">
 											{{ $mostread->category }}
-										</div>
-									</a>	
+										</div>					
 								</div>
 							</div>
 							

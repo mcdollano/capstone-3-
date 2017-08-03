@@ -38,12 +38,11 @@
 </head>
 <body>
     @include("admin")
-    @include("admin_header")
     @yield("articles")
     @yield("write_article")
     @yield("edit_article")
     @yield("dashboard")
-    <!-- dfcsfdf -->
+
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='{{ asset ("js/bootstrap.min.js")}}'></script>
