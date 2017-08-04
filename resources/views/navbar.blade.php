@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
 
           <ul class="nav navbar-nav nav_cat_container">
-            <li class="first_li"><a href="/blog">HOME</a></li>
+            <li class="first_li"><a href="/">HOME</a></li>
             <li><a href="#">BUSINESS</a></li>
          
             <li><a href="#">STARTUP</a></li>
