@@ -3,7 +3,24 @@
 
 		<!--FACEBOOK SHARE-->
 
-		<div class="fb-share-button" data-href="http://growth-hackph.herokuapp.com/viewarticle" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgrowth-hackph.herokuapp.com%2Fviewarticle&amp;src=sdkpreparse">Share</a></div>
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '736866899830566',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 		<!--END OF FACEBOOK SHARE-->
 		
@@ -41,10 +58,9 @@
 
 					<!--FACEBOOK LIKE AND SHARE-->
 
-						<div class="fb-like" data-href="growth-hackph.herokuapp.com/viewarticle" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
-							
-						</div>
+					<div class="fb-like"data-share="true" data-width="450"data-show-faces="true">
 					</div>
+
 					<!--END OF FACEBOOK LIKE AND SHARE-->
 
 					<div class="view_underline"></div>
