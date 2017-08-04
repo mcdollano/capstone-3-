@@ -3,7 +3,6 @@
 		
 		<div class="display_articles_container">
 			<div class="home_banner_image">
-				 <img src="{{ asset('images/banner_1.jpeg') }}">
 				 <h3>
 					 	<span class="caption_top">
 					 		Home to unique ideas
