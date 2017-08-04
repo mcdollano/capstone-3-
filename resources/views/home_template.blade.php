@@ -10,6 +10,14 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!--FACEBOOK SHARE-->
+    <meta property="og:url"           content="http://growth-hackph.herokuapp.com/viewarticle" />
+   <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="{{$blogs->title}}" />
+  <meta property="og:description"   content="{{$blogs->caption}}" />
+  <meta property="og:image"         content='<img src="{{URL:: to($blogs->banner_image) }}">' />
+</head>
+
     <!-- Styles -->
         <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
         
@@ -50,6 +58,17 @@
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=158583131379466";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--FACEBOOK LIKE AND SHARE 2-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=736866899830566";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 

@@ -23,6 +23,13 @@
 </script>
 
 		<!--END OF FACEBOOK SHARE-->
+
+		  <div class="fb-share-button" 
+    data-href="http://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+  </div>
+
+  <!--FACEBOOK SHARE-->
 		
 		<div class="display_articles_container">
 
@@ -65,6 +72,7 @@
 							  data-show-faces="true">
 							</div>
 						</div>
+
 					<!--END OF FACEBOOK LIKE AND SHARE-->
 
 					<div class="view_underline"></div>
