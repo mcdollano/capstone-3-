@@ -58,9 +58,13 @@
 
 					<!--FACEBOOK LIKE AND SHARE-->
 
-					<div class="fb-like"data-share="true" data-width="450"data-show-faces="true">
-					</div>
-
+							<div
+							  class="fb-like"
+							  data-share="true"
+							  data-width="450"
+							  data-show-faces="true">
+							</div>
+						</div>
 					<!--END OF FACEBOOK LIKE AND SHARE-->
 
 					<div class="view_underline"></div>
