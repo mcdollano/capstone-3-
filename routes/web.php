@@ -13,6 +13,7 @@
 
 
 // HOME PAGE
+
 Route::get('/', 'ArticlesController@showArticles2');
 
 Route::get('/admin', function() {
