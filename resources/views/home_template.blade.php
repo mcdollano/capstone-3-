@@ -71,12 +71,13 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=736866899830566";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
+  
    @yield("register_content")
    @yield("display_articles")
    @yield("view_article")
    
 </body>
+     @include("analytics")
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='{{ asset ("js/bootstrap.min.js")}}'></script>
 </html>

@@ -37,6 +37,7 @@
         
 </head>
 <body>
+    @include("analytics")
     @include("admin")
     @yield("articles")
     @yield("write_article")
