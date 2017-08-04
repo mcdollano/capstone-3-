@@ -39,6 +39,6 @@ class User extends Authenticatable
     //                 return redirect('/login');
     //             }
 
-    // }
+    // 
     
 }
