@@ -3,14 +3,10 @@
 
 		<!--FACEBOOK SHARE-->
 
-		 <meta property="og:url" content="growth-hackph.herokuapp.com/viewarticle"/>
-      	<meta property="og:type"               content="article" />
-      	<meta property="og:title"              content="{{$blogs->title}}"/>
-      	<meta property="og:description"        content="{{$blogs->caption}}"/>
-     	<meta property="og:image"              content='<img src="{{URL:: to($blogs->banner_image) }}">'/>
+		<div class="fb-share-button" data-href="http://growth-hackph.herokuapp.com/viewarticle" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgrowth-hackph.herokuapp.com%2Fviewarticle&amp;src=sdkpreparse">Share</a></div>
 
-     	<!--FACEBOOK SHARE-->
-
+		<!--END OF FACEBOOK SHARE-->
+		
 		<div class="display_articles_container">
 
 			<div class="row view_content_container">
