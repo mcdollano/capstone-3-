@@ -51,3 +51,5 @@ Route::get('/viewarticle/{id}', 'ArticlesController@viewArticles');
 // VIEW DASHBOARD
 
 Route::get('/dashboard', 'ArticlesController@show_dashboard');
+
+Route::get('/', 'ArticlesController@showArticles2');
