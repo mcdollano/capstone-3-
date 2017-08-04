@@ -60,6 +60,16 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+.article_table_container td {
+	padding-right: 20px;
+}
+
+.article_tile {
+	width: 200px;
+	padding: 10px;
+}
+
+
 .article_table_container th {
 	text-align: center;
 }

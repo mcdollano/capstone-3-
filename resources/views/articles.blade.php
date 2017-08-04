@@ -10,14 +10,11 @@
 		</a>
 		<div class="articles_container_right">
 			<table class="article_table_container">
+				
 				<tr>
 					<th class="article_id">Article ID</th>
 					<th>Title</th>
-					<!-- <th>Caption</th> -->
-					<!-- <th>Banner Image</th> -->
-					<!-- <th>Content</th> -->
 					<th>Publish Date</th>
-					<th>Number of Views</th>
 					<th>Author</th>
 					<th>Manage</th>
 				</tr>
@@ -26,10 +23,9 @@
 
 				<tr>
 					<td class="article_id">{{ $blog->id }}</td>
-					<td>{{ $blog->title }}</td>
-					<td>{{ $blog->publish_date }}</td>
-					<td>{{ $blog->article_viewss }}</td>
-					<td>{{ $blog->user->first_name }}{{ $blog->user->last_name }}</td>
+					<td class="article_tile">{{ $blog->title }}</td>
+					<td>{{ $blog->created_at }}</td>
+					<td>{{ $blog->user->first_name }}&nbsp;{{ $blog->user->last_name }}</td>
 
 					<td>
 
@@ -64,7 +60,7 @@
 			         						<div class="form-group">
 			         							<label for="content">Content :</label><br>
 			         							<textarea name="edit_content" class="form-control" id="edit_content">
-			         								{{ $blog->content }}
+			         								{!! $blog->content !!}
 			         							</textarea>
 			        						</div>
 			        						
