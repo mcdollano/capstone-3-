@@ -12,7 +12,7 @@
 
     <!--FACEBOOK SHARE-->
     <meta property="og:url"           content="growth-hackph.herokuapp.com/viewarticle" />
-   <meta property="og:type"          content="website" />
+   <meta property="og:type"          content="article" />
   <meta property="og:title"         content="{{$blogs->title}}" />
   <meta property="og:description"   content="{{$blogs->caption}}" />
   <meta property="og:image:url"         content="{{ $blogs->banner_image }}" />
