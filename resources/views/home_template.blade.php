@@ -8,14 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Growth Hack Philippines') }}</title>
 
     <!--FACEBOOK SHARE-->
     <meta property="og:url"           content="growth-hackph.herokuapp.com/viewarticle" />
    <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$blogs->title}}" />
   <meta property="og:description"   content="{{$blogs->caption}}" />
-  <meta property="og:image"         content='<img src="{{URL:: to($blogs->banner_image) }}">' />
+  <meta property="og:image"         content='{{URL:: to($blogs->banner_image) }}' />
 </head>
 
     <!-- Styles -->
