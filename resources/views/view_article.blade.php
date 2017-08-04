@@ -23,13 +23,6 @@
 </script>
 	
 		<!--END OF FACEBOOK SHARE-->
-
-		  <div class="fb-share-button" 
-    data-href="growth-hackph.herokuapp.com/viewarticle" 
-    data-layout="button_count">
-  </div>
-
-  <!--FACEBOOK SHARE-->
 		
 		<div class="display_articles_container">
 
