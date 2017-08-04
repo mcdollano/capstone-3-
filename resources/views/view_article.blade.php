@@ -3,7 +3,7 @@
 
 		<!--FACEBOOK SHARE-->
 
-		 <meta property="og:url"	content="http://growth-hackph.herokuapp.com/viewarticle"/>
+		 <meta property="og:url" content="growth-hackph.herokuapp.com/viewarticle"/>
       	<meta property="og:type"               content="article" />
       	<meta property="og:title"              content="{{$blogs->title}}"/>
       	<meta property="og:description"        content="{{$blogs->caption}}"/>
