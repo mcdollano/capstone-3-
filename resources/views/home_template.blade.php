@@ -15,7 +15,7 @@
    <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$blogs->title}}" />
   <meta property="og:description"   content="{{$blogs->caption}}" />
-  <meta property="og:image"         content='{{URL:: to($blogs->banner_image) }}' />
+  <meta property="og:image:url"         content='{{URL:: to($blogs->banner_image) }}' />
 </head>
 
     <!-- Styles -->
