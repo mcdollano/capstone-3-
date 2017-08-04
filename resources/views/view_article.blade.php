@@ -3,7 +3,7 @@
 
 		<!--FACEBOOK SHARE-->
 
-		 <meta property="og:url"	content="http://localhost:8000/viewarticle/"/>
+		 <meta property="og:url"	content="http://growth-hackph.herokuapp.com/viewarticle"/>
       	<meta property="og:type"               content="article" />
       	<meta property="og:title"              content="{{$blogs->title}}"/>
       	<meta property="og:description"        content="{{$blogs->caption}}"/>
@@ -45,7 +45,7 @@
 
 					<!--FACEBOOK LIKE AND SHARE-->
 
-						<div class="fb-like" data-href="http://localhost:8000/viewarticle" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+						<div class="fb-like" data-href="growth-hackph.herokuapp.com/viewarticle" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
 							
 						</div>
 					</div>
