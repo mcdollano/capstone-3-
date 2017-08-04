@@ -44,12 +44,12 @@ Route::get('/logout', 'LogInController@destroy');
 
 // DISPLAY ARTICLES //
 
-Route::get('/blog', 'ArticlesController@showArticles2');
-
 Route::get('/viewarticle/{id}', 'ArticlesController@viewArticles');
 
 // VIEW DASHBOARD
 
 Route::get('/dashboard', 'ArticlesController@show_dashboard');
+
+// HOME PAGE
 
 Route::get('/', 'ArticlesController@showArticles2');

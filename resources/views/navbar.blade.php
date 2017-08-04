@@ -1,6 +1,6 @@
 <div class="navbar_container">
 	<div class="logo_container">
-        <a href="/blog">
+        <a href="/">
 		  <img src="{{ asset('images/growth_hack_logo2_transparent.png') }}">
         </a>
 	</div>

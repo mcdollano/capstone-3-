@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Growth Hack Philippines') }}</title>
 
     <!-- Styles -->
         <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
