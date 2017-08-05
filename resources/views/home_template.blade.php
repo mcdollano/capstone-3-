@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{URL:: to($blogs->banner_image) }}">
+    
 
     <title>{{ config('app.name', 'Growth Hack Philippines') }}</title>
 
     <!--FACEBOOK SHARE-->
-    <meta property="og:url"           content="growth-hackph.herokuapp.com/viewarticle" />
-   <meta property="og:type"          content="article" />
-  <meta property="og:title"         content="{{$blogs->title}}" />
-  <meta property="og:description"   content="{{$blogs->caption}}" />
-  <meta property="og:image:url"         content="{{URL:: to($blogs->banner_image) }}" />
+    @yield("meta_fb")
   
 </head>
 
@@ -76,6 +72,10 @@
    @yield("register_content")
    @yield("display_articles")
    @yield("view_article")
+   @yield("display_category_business")
+   @yield("display_category_startup")
+   @yield("display_category_career")
+   @yield("display_category_leadership")
    
 </body>
      @include("analytics")

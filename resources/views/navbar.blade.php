@@ -20,11 +20,11 @@
 
           <ul class="nav navbar-nav nav_cat_container">
             <li class="first_li"><a href="/">HOME</a></li>
-            <li><a href="#">BUSINESS</a></li>
+            <li><a href="/articleCategoryBusiness">BUSINESS</a></li>
          
-            <li><a href="#">STARTUP</a></li>
-            <li><a href="#">CAREER</a></li>
-            <li class="leadership"><a href="#">LEADERSHIP</a></li>
+            <li><a href="/articleCategoryStartup">STARTUP</a></li>
+            <li><a href="/articleCategoryCareer">CAREER</a></li>
+            <li class="leadership"><a href="/articleCategoryLeadership">LEADERSHIP</a></li>
           </ul>
 
            @if (Auth::check())
@@ -38,6 +38,7 @@
                         <ul class="dropdown-menu">
                             <li><a href='/logout'>Log Out</a></li>
                             <li><a href="#">Edit Profile</a></li>
+                          
                         </ul>
                 </li>
             </ul>

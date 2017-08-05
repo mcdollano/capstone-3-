@@ -52,7 +52,7 @@
 
 							<div class="latest_article_author_container">
 								by<span class="author_name">
-								 {{ $blog->user->first_name }}{{ $blog->user->last_name }}
+								 {{ $blog->user->first_name }}&nbsp;{{ $blog->user->last_name }}
 								 </span>
 							</div>
 

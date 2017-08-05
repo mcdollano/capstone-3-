@@ -8,6 +8,7 @@ use App\Tags;
 use App\Comments;
 use DB;
 use App\User;
+use Auth;
 
 class ArticlesController extends Controller
 {
@@ -25,8 +26,8 @@ class ArticlesController extends Controller
     // HOME DISPLAY ARTICLES 
 
     function showArticles2(){
-        $blogs = Articles::orderBy('created_at', 'asc')->take(5)->get();
-        $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
+        $blogs = Articles::orderBy('created_at', 'desc')->take(5)->get();
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(10)->get();
         $tags = Tags::all();
         
         $comments = Comments::all();
@@ -47,7 +48,6 @@ class ArticlesController extends Controller
 
     function editArticle(Request $request, $blog_id){
     	$article = Articles::find($blog_id);
-    	// $request->file('edit_banner_image')->move("storage/", 'try');
     	$article->title = $request->input('edit_title');
   		$article->caption =$request->input('edit_content');
         $article->save();
@@ -67,7 +67,7 @@ class ArticlesController extends Controller
         $new_article = new Articles();
         $new_tag = new Tags();
 
-        $new_article->user_id=1;
+        $new_article->user_id = Auth::user()->id;
         $new_article->title=$request->write_title;
         $new_article->caption=$request->write_caption;
         $new_article->category=$request->write_category;
@@ -113,7 +113,61 @@ class ArticlesController extends Controller
         return view('dashboard', compact('blogs','tags','comments', 'total_posts', 'total_users'));
     }
 
+    function show_category_business() {
 
+        // BUSINESS CATEGORY
 
+        $business_category_first = Articles::where("category",'Franchising' )->first();
+
+        $business_category_all = DB::table('articles')->where('category', '=', 'Franchising' )
+            ->orwhere('category', '=', 'News and Events')
+            ->get();
+
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
+
+        return view('display_business_category', compact('business_category_first', 'business_category_all', 'mostreads'));
+    }
+
+    function show_category_startup() {
+
+    // STARTUP CATEGORY     
+
+        $startup_category_first = Articles::where("category",'Startup' )->first();
+
+        $startup_category_all = Articles::where("category",'Startup' )->get();
+
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
+
+        return view('display_startup_category', compact('startup_category_first', 'startup_category_all', 'mostreads'));
+
+    }
+
+     function show_category_career() {
+
+    // CAREER CATEGORY     
+
+        $career_category_first = Articles::where("category",'Career' )->first();
+
+        $career_category_all = Articles::where("category",'Career' )->get();
+
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
+
+        return view('display_career_category', compact('career_category_first', 'career_category_all', 'mostreads'));
+
+    }
+
+    function show_category_leadership() {
+
+    // CAREER CATEGORY     
+
+        $leadership_category_first = Articles::where("category",'Leadership' )->first();
+
+        $leadership_category_all = Articles::where("category",'Leadership' )->get();
+
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
+
+        return view('display_leadership_category', compact('leadership_category_first', 'leadership_category_all', 'mostreads'));
+
+    }
   
 }

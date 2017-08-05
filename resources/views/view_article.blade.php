@@ -1,8 +1,18 @@
 @extends("home_template")
-	@section("view_article")
+	@section("meta_fb")	
+
+	<meta name="csrf-token" content="{{URL:: to($blogs->banner_image) }}">
+
+	 <meta property="og:url"           content="growth-hackph.herokuapp.com/viewarticle" />
+   <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="{{$blogs->title}}" />
+  <meta property="og:description" content="{{$blogs->caption}}" />
+  <meta property="og:image:url" content="{{URL:: to($blogs->banner_image) }}" />
+
+  	@endsection
 
 		<!--FACEBOOK SHARE-->
-
+@section("view_article")
 			<script>
   window.fbAsyncInit = function() {
     FB.init({

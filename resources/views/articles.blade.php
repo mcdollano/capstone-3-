@@ -53,16 +53,19 @@
 			         							<label for="title">Caption:</label>
 			         							<input type="text" class="form-control" value="{{ $blog->caption }}" name="edit_caption" id="edit_caption">
 			         						</div>
-			         					<!-- 	<div class="form-group">
-			         							<label for="banner_image">Banner Image:</label>
-			         							<input type="file" name="edit_banner_image" accept="images/*" required>
-			         						</div>	 -->
+			         			
 			         						<div class="form-group">
 			         							<label for="content">Content :</label><br>
-			         							<textarea name="edit_content" class="form-control" id="edit_content">
+			         							<textarea id="edit_content{{$blog->id}}" name="edit_content" class="form-control" class="edit_content">
 			         								{!! $blog->content !!}
 			         							</textarea>
 			        						</div>
+
+			        						<script>
+           										tinymce.init({
+          										selector: '#edit_content{{$blog->id}}'
+            									});
+       										</script>
 			        						
 			        				</div>
 			        				<div class="modal-footer">  

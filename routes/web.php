@@ -54,3 +54,19 @@ Route::get('/viewarticle/{id}', 'ArticlesController@viewArticles');
 // VIEW DASHBOARD
 
 Route::get('/dashboard', 'ArticlesController@show_dashboard');
+
+// DISPLAY CATEGORY BUSINESS 
+
+Route::get('/articleCategoryBusiness', 'ArticlesController@show_category_business');
+
+// DISPLAY CATEGORY STARTUP
+
+Route::get('/articleCategoryStartup', 'ArticlesController@show_category_startup');
+
+// DISPLAY CATEGORY CAREER 
+
+Route::get('/articleCategoryCareer', 'ArticlesController@show_category_career');
+
+// DISPLAY CATEGORY LEADERSHIP
+
+Route::get('/articleCategoryLeadership', 'ArticlesController@show_category_leadership');
