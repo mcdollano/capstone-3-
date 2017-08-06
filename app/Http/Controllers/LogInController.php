@@ -55,7 +55,7 @@ class LogInController extends Controller
 
         // LogIn Session
         auth()->login($current_user, true);
-        return redirect('/blog');
+        return redirect('/');
     }
 
     /**
@@ -104,7 +104,7 @@ class LogInController extends Controller
     public function destroy()
     {      
         auth()->logout();
-        return redirect('/blog');
+        return redirect('/');
     }
     
 }

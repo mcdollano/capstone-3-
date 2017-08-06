@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 use App\Articles;
 use App\Tags;
 use App\Comments;
@@ -26,13 +27,23 @@ class ArticlesController extends Controller
     // HOME DISPLAY ARTICLES 
 
     function showArticles2(){
-        $blogs = Articles::orderBy('created_at', 'desc')->take(5)->get();
+        $blogs = Articles::orderBy('created_at', 'desc')->paginate(5);
         $mostreads = Articles::orderBy('article_views', 'desc')->take(10)->get();
         $tags = Tags::all();
-        
         $comments = Comments::all();
 
-        return view('display_articles', compact('blogs','tags','comments', 'mostreads'));
+        //* footer *//
+
+        $business_category_home = DB::table('articles')->where('category', '=', 'Franchising' )
+            ->orwhere('category', '=', 'News and Events')
+            ->take(5)->get();
+
+        $startup_category_home = Articles::where("category",'Startup' )->take(5)->get();
+        $career_category_home = Articles::where("category",'Career' )->take(5)->get();
+        $leadership_category_home = Articles::where("category",'Leadership' )->take(5)->get();
+
+
+        return view('display_articles', compact('blogs','tags','comments', 'mostreads','business_category_home', 'startup_category_home', 'career_category_home', 'leadership_category_home'));
     }
 
     // VIEW ARTICLE PAGE
@@ -118,7 +129,7 @@ class ArticlesController extends Controller
         // BUSINESS CATEGORY
 
         $business_category_first = Articles::where("category",'Franchising' )->first();
-
+       
         $business_category_all = DB::table('articles')->where('category', '=', 'Franchising' )
             ->orwhere('category', '=', 'News and Events')
             ->get();
@@ -158,7 +169,7 @@ class ArticlesController extends Controller
 
     function show_category_leadership() {
 
-    // CAREER CATEGORY     
+    // LEADERSHIP CATEGORY     
 
         $leadership_category_first = Articles::where("category",'Leadership' )->first();
 
@@ -169,5 +180,29 @@ class ArticlesController extends Controller
         return view('display_leadership_category', compact('leadership_category_first', 'leadership_category_all', 'mostreads'));
 
     }
+
+    function search(Request $request) {
+
+        $search = $request->search_bar;
+
+        $search_article=DB::table('articles')->
+            where('category', 'like', '%'. $search .'%')
+            ->orwhere('title', 'like', '%'. $search .'%')
+            ->orwhere('content', 'like', '%'. $search .'%')
+            ->get();
+
+        $search_count=$search_article->count();
+
+        $mostreads = Articles::orderBy('article_views', 'desc')->take(5)->get();
+
+        return view('search_result', compact('search_article', 'search','search_count', 'mostreads'));
+        
+    }
+
+
+
+
+
+
   
 }

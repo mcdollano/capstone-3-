@@ -57,12 +57,6 @@
 										{!! $leadership_category->caption !!}
 									</div>
 
-									<div class="latest_article_author_container">
-										by<span class="author_name">
-
-								 		</span>
-									</div>
-
 									<div class="latest_article_createdat_container">
 										{{ $leadership_category->publish_date }}{{ $leadership_category->created_at }}
 									</div>	

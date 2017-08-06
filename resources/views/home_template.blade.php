@@ -26,6 +26,10 @@
 
         <link rel="stylesheet" type="text/css" href='{{asset("css/bootstrap.css")}}'>
         <link rel="stylesheet" type="text/css" href='{{asset("css/style.css")}}'>
+        <script type="text/javascript" src="{{ URL::to('js/jquery.min.js') }}"></script>
+
+
+
 
         <link rel="stylesheet" href='{{asset("font-awesome/css/font-awesome.min.css")}}'>
 
@@ -76,9 +80,14 @@
    @yield("display_category_startup")
    @yield("display_category_career")
    @yield("display_category_leadership")
+   @yield("edit_profile")
+   @yield("search_result")
+
    
 </body>
      @include("analytics")
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='{{ asset ("js/bootstrap.min.js")}}'></script>
+    @include("footer")
+   
 </html>

@@ -124,12 +124,34 @@ class RegisterController extends Controller
        
         // auth()->login($new_user);
 
-        return redirect('/blog');
+        return redirect('/');
 
     }
 
-    public function checkUser(){
-        $users = Auth::user();
-        dd($users);
+    public function editProfile(){
+        $user = Auth::user();
+        $user_firstname = $user->first_name;
+        $user_lastname = $user->last_name;
+        $user_email = $user->email;
+        $user_username = $user->user_name;
+        $user_password = $user->user_password;
+
+        return view('edit_profile', compact('user', 'user_firstname', 'user_lastname', 'user_email', 'user_username', 'user_password'));
+
     }
+
+
+    public function saveEditProfile(Request $request){
+        $user = Auth::user();
+        $user->first_name = $request->input('edit_firstname');
+        $user->last_name = $request->input('edit_lastname');
+        $user->email = $request->input('edit_email');
+        $user->user_name = $request->input('edit_username');
+        $user->user_password = $request->input('edit_password');
+        $user->save();
+
+        return redirect('/');
+
+    }
+
 }

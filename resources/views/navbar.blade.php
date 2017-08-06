@@ -36,8 +36,21 @@
                         <span class="caret"></span>
                     </a>
                         <ul class="dropdown-menu">
-                            <li><a href='/logout'>Log Out</a></li>
-                            <li><a href="#">Edit Profile</a></li>
+                            <li>
+                                <a href='/logout'>Log Out</a>
+                            </li>
+                            <li>
+                                <a href="/editProfile">Edit Profile</a>
+                            </li>
+
+                            @if(Auth::user()->user_role == "admin")
+
+                            <li>
+                                <a href="/articles">Admin Panel</a>
+                            </li>
+
+                            @endif
+
                           
                         </ul>
                 </li>
@@ -104,9 +117,9 @@
         
         @endif
 
-        <form class="navbar-form search_container" role="search">
+        <form method="GET" action="/search" class="navbar-form search_container" role="search">
             <div class="input-group add-on search_container">
-                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                <input class="form-control" placeholder="Search" name="search_bar" id="srch-term" type="text">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                             <i class="glyphicon glyphicon-search"></i>    

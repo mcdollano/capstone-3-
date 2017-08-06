@@ -57,12 +57,6 @@
 										{!! $business_category->caption !!}
 									</div>
 
-									<div class="latest_article_author_container">
-										by<span class="author_name">
-
-								 		</span>
-									</div>
-
 									<div class="latest_article_createdat_container">
 										{{ $business_category->publish_date }}{{ $business_category->created_at }}
 									</div>	
@@ -169,12 +163,6 @@
 								</a>	
 									<div class="latest_article_caption_container">
 										{!! $business_category->caption !!}
-									</div>
-
-									<div class="latest_article_author_container">
-										by<span class="author_name">
-
-								 		</span>
 									</div>
 
 									<div class="latest_article_createdat_container">

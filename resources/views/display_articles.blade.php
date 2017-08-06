@@ -3,20 +3,18 @@
 		
 		<div class="display_articles_container">
 			<div class="home_banner_image">
-				 <img src="{{ asset('images/banner_1.jpeg') }}">
+				 <img src="{{ asset('images/banner_4.jpeg') }}">
 				 <h3>
 					 	<span class="caption_top">
-					 		Home to unique ideas
-					 	</span><br>
+					 		Home to unique ideas,
+					 	</span>
+					 	<br>
+					 	<br>
 					 	<span class="caption_bottom">
 					 		from the country's smartest minds.
 					 	</span> 	
 				 </h3>
-				 <h5>
-				 	<span>
-				 		Hear directly from the people who know it best. <br>From tech to politics to creativity and more<br> — whatever your interest, <br>we’ve got you covered.
-				 	</span>
-				 </h5>
+			
 			</div>
 			<div class="home_content_container row">
 				<div class="col-sm-8 col-md-8 col-lg-8">
@@ -62,11 +60,17 @@
 						</div>
 						
 					</div>
+
 					<div class="underline"></div>
 
 				@endforeach	
+					<div class="pagination_container">		
+						<span>
+							{{ $blogs->render() }}
+						</span>
+					</div>
 
-				</div>
+				</div><!--column 8-->	
 
 				<!--MOST READ ARTICLES -->
 
@@ -104,8 +108,71 @@
 				@endforeach	
 					
 				</div>
+
 			</div>
+
+				<!--footer-->
+
+					<div class="row footer_content">
+						<div class="col-sm-3">
+							<a href="/articleCategoryBusiness">	
+								<h2>BUSINESS</h2>
+							</a>	
+							<div class="footer_underline"></div>
+							@foreach($business_category_home as $business_home)
+							<a href='{{url("/viewarticle/$business_home->id")}}'>
+								<div class="footer_title">
+									{{ $business_home->title }}
+								</div>
+							</a>
+							@endforeach
+						</div>
+						<div class="col-sm-3">
+							<a href="/articleCategoryStartup">
+								<h2>STARTUP</h2>
+							</a>	
+							<div class="footer_underline"></div>
+							@foreach($startup_category_home as $startups_home)
+							<a href='{{url("/viewarticle/$startups_home->id")}}'>
+								<div class="footer_title">
+									{{ $startups_home->title }}
+								</div>
+							</a>	
+							@endforeach
+						</div>
+						<div class="col-sm-3">
+							<a href="/articleCategoryCareer">
+								<h2>CAREER</h2>
+							</a>	
+							<div class="footer_underline"></div>
+							@foreach($career_category_home as $career_home)
+							<a href='{{url("/viewarticle/$career_home->id")}}'>
+								<div class="footer_title">
+									{{ $career_home->title }}
+								</div>
+							</a>	
+							@endforeach
+						</div>
+						<div class="col-sm-3">
+							<a href="/articleCategoryLeadership">
+								<h2>LEADERSHIP</h2>
+							</a>	
+							<div class="footer_underline"></div>
+							@foreach($leadership_category_home as $leadership_home)
+							<a href='{{url("/viewarticle/$leadership_home->id")}}'>
+								<div class="footer_title">
+									{{ $leadership_home->title }}
+								</div>
+							</a>	
+							@endforeach
+						</div>
+
+					</div><!--footer_content-->
+
+
 		</div>
+
+
 		
 
 	@endsection

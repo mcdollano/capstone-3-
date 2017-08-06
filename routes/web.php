@@ -26,20 +26,30 @@ Route::post('/editArticle/{blog_id}', 'ArticlesController@editArticle');
 
 Route::post('/deleteArticle/{blog_id}','ArticlesController@deleteArticle');
 
+// EDIT ARTICLE //
+
 Route::get('/editArticle',function() {
 	return view('edit_article');
 });
+
+// WRITE ARTICLE //
 
 Route::get('/writeArticle',function() {
 	return view('write_article');
 });
 
+// SAVE ARTICLE //
+
 Route::post('/saveArticle', 'ArticlesController@addArticle');
+
+// REGISTER //
 
 Route::get('/register', 'RegisterController@create');
 Route::post('/registerUser', 'RegisterController@registerUser');
 
 Route::get('/checkuser', 'RegisterController@store');
+
+// LOG IN //
 
 Route::post('/login', 'LogInController@store');
 
@@ -70,3 +80,15 @@ Route::get('/articleCategoryCareer', 'ArticlesController@show_category_career');
 // DISPLAY CATEGORY LEADERSHIP
 
 Route::get('/articleCategoryLeadership', 'ArticlesController@show_category_leadership');
+
+//EDIT PROFILE //
+
+Route::get('/editProfile', 'RegisterController@editProfile');
+
+//SAVE EDIT PROFILE //
+
+Route::post('/saveEditProfile', 'RegisterController@saveEditProfile');
+
+// SEARCH //
+
+Route::get('/search', 'ArticlesController@search');
