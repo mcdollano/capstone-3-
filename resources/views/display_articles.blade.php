@@ -3,15 +3,17 @@
 		
 		<div class="display_articles_container">
 			<div class="home_banner_image">
-				 <img src="{{ asset('images/banner_4.jpeg') }}">
+				 <img src="{{ asset('images/banner_1.jpeg') }}">
 				 <h3>
+
 					 	<span class="caption_top">
-					 		Home to unique ideas,
+					 		STAY HUNGRY.
 					 	</span>
 					 	<br>
 					 	<br>
+					 	<br>
 					 	<span class="caption_bottom">
-					 		from the country's smartest minds.
+					 		STAY FOOLISH.
 					 	</span> 	
 				 </h3>
 			
